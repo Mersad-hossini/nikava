@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, CircleX } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import { StoryModalProps } from "../../types/Types";
 
@@ -56,9 +56,9 @@ const StoryModal = ({ isOpen, story, onClose }: StoryModalProps) => {
         {/* دکمه بستن */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-2 z-10 text-gray-500 hover:text-red-500 transition-colors text-xl font-bold cursor-pointer"
+          className="absolute top-5 left-2 z-10 text-white transition-colors font-bold cursor-pointer"
         >
-          <CircleX />
+          <X />
         </button>
 
         <div className="absolute top-0 left-0 right-0 flex gap-1 p-3 z-20">

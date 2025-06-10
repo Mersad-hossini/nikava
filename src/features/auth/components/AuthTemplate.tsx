@@ -3,8 +3,22 @@ import React from "react";
 
 function AuthTemplate({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50" >
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
+    <div className="relative flex justify-center items-center min-h-screen bg-gray-50">
+      {/* تصویر پس‌زمینه */}
+      <Image
+        src="/images/auth-background.png"
+        alt="Background"
+        layout="fill"
+        objectFit="cover" // برای تنظیم اندازه و پر کردن پس‌زمینه
+        quality={100} // تنظیم کیفیت تصویر
+        priority
+        style={{
+          filter: "brightness(70%) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))", // سایه به تصویر
+        }}
+      />
+
+      {/* فرم ورود و ثبت‌نام */}
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96 relative z-10">
         {/* لوگو */}
         <Image
           src="/images/nikava-logo.png"

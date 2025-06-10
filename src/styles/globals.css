@@ -55,6 +55,7 @@ body {
 
 @theme {
   --breakpoint-lg: 1030px;
+  --breakpoint-mid-md: 992px
 }
 
 @layer utilities {

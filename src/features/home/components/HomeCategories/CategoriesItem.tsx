@@ -2,30 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function CategoriesItem() {
+interface ImageProps {
+  img: string;
+  title: string;
+}
+
+function CategoriesItem({ img, title }: ImageProps) {
   return (
     <Link href="#">
-      {/* تصویر مربعی اصلی */}
-      <div className="relative w-35 h-35 overflow-hidden">
+      {/* تصویر دسته‌بندی دایره‌ای تنها */}
+      <div className="relative w-30 h-30 mx-auto">
         <Image
-          src="/images/home-categoty.png" // تصویر مربعی اصلی
-          width={300} // عرض مربعی
-          height={300} // ارتفاع مربعی
-          alt="Home Category"
-          className="object-cover"
+          src={img} // تصویر دسته‌بندی
+          width={192} // عرض تصویر دسته‌بندی
+          height={192} // ارتفاع تصویر دسته‌بندی
+          alt="Category"
+          className="object-cover w-full h-full rounded-full transition-all ease-in-out shadow-sm hover:shadow-md hover:border-3 hover:border-blue-500"
         />
-        {/* تصویر دسته‌بندی */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-36 h-36 rounded-full overflow-hidden">
-          <Image
-            src="/images/category1.png" // تصویر دسته‌بندی
-            width={300} // عرض تصویر دسته‌بندی
-            height={300} // ارتفاع تصویر دسته‌بندی
-            alt="Category"
-            className="object-cover w-50 h-full"
-          />
-        </div>
       </div>
-        <span className="flex justify-center mt-3  text-md text-zinc-500">اسم محصول تستی</span>
+      {/* نام محصول */}
+      <span className="block text-center mt-2 text-md text-zinc-500">
+        {title}
+      </span>
     </Link>
   );
 }

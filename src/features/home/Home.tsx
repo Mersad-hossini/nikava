@@ -95,7 +95,7 @@ function Home() {
       )}
 
       <Slider />
-      {/* <HomeCategories /> */}
+      <HomeCategories />
     </div>
   );
 }
