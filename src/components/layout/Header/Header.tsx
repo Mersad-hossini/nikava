@@ -11,7 +11,7 @@ function Header() {
     <header className="shadow-md">
       <TopBar />
 
-      <nav className="mt-3 mx-6 pb-3">
+      <nav className="mt-3 mx-6 pb-3 lg:pb-0">
         <div className="lg:flex lg:justify-between items-center">
           {/* Right Side Nav */}
           <div className="flex">
