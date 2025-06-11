@@ -9,7 +9,7 @@ const StoryModal = ({ isOpen, story, onClose }: StoryModalProps) => {
 
   useEffect(() => {
     if (isOpen) {
-      setCurrentSlide(0); 
+      setCurrentSlide(0);
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
@@ -34,7 +34,7 @@ const StoryModal = ({ isOpen, story, onClose }: StoryModalProps) => {
     if (currentSlide < story.slides.length - 1) {
       setCurrentSlide((prev) => prev + 1);
     } else {
-      onClose(); 
+      onClose();
     }
   };
 
@@ -98,17 +98,17 @@ const StoryModal = ({ isOpen, story, onClose }: StoryModalProps) => {
         {currentSlide > 0 && (
           <button
             onClick={handlePrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 cursor-pointer"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 cursor-pointer"
           >
-            <ChevronLeft />
+            <ChevronRight />
           </button>
         )}
         {currentSlide < story.slides.length - 1 && (
           <button
             onClick={handleNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 cursor-pointer"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 cursor-pointer"
           >
-            <ChevronRight />
+            <ChevronLeft />
           </button>
         )}
       </div>
