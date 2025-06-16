@@ -1,4 +1,4 @@
-// import Footer from "@/components/layout/Footer/Footer";
+import Footer from "@/components/layout/Footer/Footer";
 import Header from "@/components/layout/Header/Header";
 import React from "react";
 function SiteLayout({ children }: { children: React.ReactNode }) {
@@ -6,7 +6,7 @@ function SiteLayout({ children }: { children: React.ReactNode }) {
     <>
       <Header />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

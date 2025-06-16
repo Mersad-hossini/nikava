@@ -6,6 +6,10 @@ import Slider from "./components/Slider/Slider";
 import StoryModal from "./components/story/StoryModal";
 import { StoryType } from "./types/Types";
 import HomeCategories from "./components/HomeCategories/HomeCategories";
+import MultiBanner from "./components/Banner/MultiBanner";
+import SingleBanner from "./components/Banner/SingleBanner";
+import Brands from "./components/Brands/Brands";
+import Blog from "./components/Blog/Blog";
 
 const storiesApi = [
   {
@@ -76,7 +80,7 @@ function Home() {
   const [stories] = useState(storiesApi); // const [stories, setStories] = useState(storiesApi);
 
   return (
-    <div className="md:px-15">
+    <div className=" mb-10">
       {stories.length > 0 && (
         <div className="flex justify-between">
           <StoryCarousel
@@ -96,6 +100,16 @@ function Home() {
 
       <Slider />
       <HomeCategories />
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-5 sm:px-15">
+        <MultiBanner />
+        <MultiBanner />
+        <MultiBanner />
+        <MultiBanner />
+      </div>
+      <SingleBanner />
+      <Brands />
+      <Blog />
+      
     </div>
   );
 }

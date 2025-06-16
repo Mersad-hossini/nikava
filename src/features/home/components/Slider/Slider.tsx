@@ -17,12 +17,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Slider() {
   return (
-    <div className="relative w-full overflow-hidden mt-5">
-      <button className="swiper-button-next-slider absolute top-1/2 cursor-pointer -translate-y-1/2 right-6 z-10 bg-white shadow-md rounded-full p-2">
+    <div className="relative w-full overflow-hidden mt-5 md:px-15 select-none">
+      <button className="swiper-button-next-slider absolute top-1/2 cursor-pointer -translate-y-1/2 right-0 md:right-16 z-10 bg-white shadow-md rounded-full p-2">
         <ChevronRight className="w-5 h-5 text-gray-600" />
       </button>
 
-      <button className="swiper-button-prev-slider absolute top-1/2 cursor-pointer -translate-y-1/2 left-6 z-10 bg-white shadow-md rounded-full p-2">
+      <button className="swiper-button-prev-slider absolute top-1/2 cursor-pointer -translate-y-1/2 left-0 md:left-16 z-10 bg-white shadow-md rounded-full p-2">
         <ChevronLeft className="w-5 h-5 text-gray-600" />
       </button>
       <Swiper
@@ -37,6 +37,7 @@ export default function Slider() {
           nextEl: ".swiper-button-next-slider",
           prevEl: ".swiper-button-prev-slider",
         }}
+        dir="ltr"
         className="w-full rounded-lg"
       >
         <SwiperSlide>

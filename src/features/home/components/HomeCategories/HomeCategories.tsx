@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function HomeCategories() {
   return (
-    <div className="relative flex flex-wrap items-center justify-around gap-10 mb-10 mt-10">
+    <div className="relative flex flex-wrap items-center justify-around gap-10 mb-10 mt-10 px-5 sm:px-15 select-none">
       <CategoriesItem img={"/images/banner_Categoriey1.png"} title="موبایل" />
       <CategoriesItem img={"/images/banner_Categoriey2.png"} title="لپ تاپ" />
       <CategoriesItem

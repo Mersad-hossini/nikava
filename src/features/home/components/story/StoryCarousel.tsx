@@ -24,7 +24,7 @@ export default function StoryCarousel({
       </button>
 
       <Swiper
-        dir="rtl"
+        dir="ltr"
         spaceBetween={20}
         loop={true}
         freeMode={true}
@@ -35,11 +35,12 @@ export default function StoryCarousel({
         }}
         modules={[Autoplay, FreeMode, Navigation]}
         breakpoints={{
-          320: { slidesPerView: 1.5 },
-          400: { slidesPerView: 2.5 },
-          560: { slidesPerView: 3.5 },
-          640: { slidesPerView: 4.5 },
-          768: { slidesPerView: 5.5 },
+          320: { slidesPerView: 2.5},
+          380: { slidesPerView: 3},
+          400: { slidesPerView: 3.5 },
+          560: { slidesPerView: 4.5 },
+          640: { slidesPerView: 5.5 },
+          768: { slidesPerView: 6 },
           992: { slidesPerView: 6.5 },
           1200: { slidesPerView: 8 },
         }}

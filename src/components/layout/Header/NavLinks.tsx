@@ -19,7 +19,7 @@ function NavLinks() {
   return (
     <div className="hidden lg:flex mt-5 items-center">
       <div className="flex relative group h-10">
-        <Link href="#" className="relative flex items-center pl-4">
+        <Link href="#" className=" flex items-center pl-4">
           <div className="flex items-center cursor-pointer">
             <Menu className="size-4 flex items-center ml-2" />
             <span className="text-sm font-bold">دسته‌بندی کالاها</span>

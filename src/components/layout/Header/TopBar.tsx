@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function TopBar() {
   return (
-    <div>
+    <div className="select-none">
       <Image
         src="/images/topbar.gif"
         alt="Topbar"

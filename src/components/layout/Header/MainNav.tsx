@@ -65,7 +65,7 @@ function MainNav() {
           </div>
           {isUserBoxOpen && (
             <div className="absolute top-6 left-0 z-20" ref={userBoxRef}>
-              <div className="flex justify-center rounded-lg items-center bg-gray-50">
+              <div className="flex justify-center shadow-lg rounded-lg items-center bg-gray-50">
                 <div className="bg-white rounded-lg shadow-2xl w-full lg:w-70">
                   <Link href="#">
                     <div className="flex justify-between items-center rounded-lg p-4 border-t-2 border-b-1 border-t-yellow-500 border-b-gray-100 text-neutral-700 hover:bg-gray-100">
@@ -75,7 +75,7 @@ function MainNav() {
                       <ChevronLeft />
                     </div>
                   </Link>
-                  <ul className="space-y-2 p-4 rounded-lg">
+                  <ul className="space-y-2 p-4 pt-2 rounded-lg">
 
                     <li className="border-b border-gray-100">
                       <Link href="/profile/orders">

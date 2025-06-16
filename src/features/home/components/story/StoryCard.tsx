@@ -6,7 +6,7 @@ function StoryCard({ story, onClick }: StoryCardProps) {
   return (
     <div
       onClick={onClick}
-      className="size-20 lg:size-25 rounded-full p-[2.5px] mt-4 mb-10 bg-gradient-to-tr from-[#e03d96] to-[#7d4c9e] cursor-pointer"
+      className="size-20 lg:size-25 rounded-full p-[2.5px] mt-4 mb-10 bg-gradient-to-tr from-[#e03d96] to-[#7d4c9e] cursor-pointer select-none"
     >
       <div className="flex flex-col items-center">
         <div className="bg-white rounded-full p-[3px] w-full h-full">

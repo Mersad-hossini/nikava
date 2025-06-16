@@ -55,12 +55,18 @@ body {
 
 @theme {
   --breakpoint-lg: 1030px;
-  --breakpoint-mid-md: 992px
+  --breakpoint-mid-md: 992px;
+  --breakpoint-xs: 500px;
 }
 
 @layer utilities {
   .bg-border-stories {
     background: linear-gradient(315deg, #e03d96, #7d4c9e);
+  }
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
