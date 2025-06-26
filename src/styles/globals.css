@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @plugin "daisyui";
 
-/* نسخه معمولی */
+/* IranSans normal font */
 @font-face {
   font-family: "IranSans";
   src: url("/fonts/IRANSans.ttf") format("truetype");
@@ -10,6 +10,7 @@
   font-style: normal;
   font-display: swap;
 }
+/* IranSans bold font(font-bold) */
 @font-face {
   font-family: "IranSans";
   src: url("/fonts/IRANSans_Bold.ttf") format("truetype");
@@ -17,6 +18,7 @@
   font-style: normal;
   font-display: swap;
 }
+/* IranSans normal font */
 @font-face {
   font-family: "IranSans";
   src: url("/fonts/IRANSans_Light.ttf") format("truetype");
@@ -25,7 +27,7 @@
   font-display: swap;
 }
 
-/* نسخه با اعداد فارسی */
+/* IranSans normal number font */
 @font-face {
   font-family: "IranSansNum";
   src: url("/fonts/IRANSans(FaNum).ttf") format("truetype");
@@ -55,7 +57,7 @@ body {
 
 @theme {
   --breakpoint-lg: 1030px;
-  --breakpoint-mid-md: 992px;
+  --breakpoint-mid-md: 62rem;
   --breakpoint-xs: 500px;
 }
 

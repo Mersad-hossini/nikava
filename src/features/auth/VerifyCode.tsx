@@ -7,7 +7,7 @@ import AuthTemplate from "./components/AuthTemplate";
 import Timer from "./components/Timer";
 
 function VerifyCode() {
-  const [timer, setTimer] = useState(120); // تایمر 2 دقیقه (120 ثانیه)
+  const [timer, setTimer] = useState(120); // Timer(2 min)
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function VerifyCode() {
 
   const handleEditPhoneNumber = () => {
     setIsEditing(true);
-    setTimer(120); // ریست کردن تایمر به 120 ثانیه زمانی که کاربر بخواهد شماره تماس را ویرایش کند
+    setTimer(120);
   };
 
   return (
@@ -37,7 +37,6 @@ function VerifyCode() {
             />
           </div>
 
-          {/* دکمه ادامه */}
           <Link
             href="/"
             className="inline-block text-center w-full py-3 bg-yellow-500 cursor-pointer text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300 text-lg"
@@ -60,24 +59,22 @@ function VerifyCode() {
             <Timer timer={timer} />
           )}
 
-          {/* دکمه ویرایش شماره تماس */}
           <div className="flex justify-center text-center mt-4">
-            <button
+            <Link href="/auth"
               onClick={handleEditPhoneNumber}
               className="flex cursor-pointer"
             >
               ویرایش شماره تماس
               <ChevronLeft />
-            </button>
+            </Link>
           </div>
 
-          {/* بخش شرایط و قوانین */}
           <div className="text-center mt-6 text-sm text-gray-600">
             <span>ورود | ثبت نام شما به معنای پذیرش </span>
             <Link href="#" className="text-blue-600 hover:underline">
-              قوانین و مقررات
-            </Link>{" "}
-            <span>نیکاوا است.</span>
+               قوانین و مقررات  
+            </Link>
+            <span> نیکاوا است.</span>
           </div>
         </form>
       </AuthTemplate>

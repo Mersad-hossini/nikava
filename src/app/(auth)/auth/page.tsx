@@ -1,4 +1,4 @@
-import Auth from "@/features/auth/Auth";
+import Auth from "@/features/Auth/Auth";
 import React from "react";
 
 function AuthPage() {

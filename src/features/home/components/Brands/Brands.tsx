@@ -8,8 +8,9 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import TitleSection from "@/components/ui/TitleSection";
 
-// فرض: داده برندها یا استاتیک هست یا از prop یا API میاد
+// Api
 const brandList = [
   { id: 1, name: "Brand1", image: "/images/brand1.png", href: "#" },
   { id: 2, name: "Brand2", image: "/images/brand2.png", href: "#" },
@@ -27,9 +28,7 @@ export default function BrandCarousel() {
     <div className="m-5 sm:px-15">
       <div className="relative w-full overflow-hidden">
         <div className="px-5 sm:px-15 mt-10 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 border-b-2 border-blue-600 inline-block pb-1 mb-6">
-            محبوب‌ترین برندها
-          </h2>
+          <TitleSection title="محبوب‌ترین برندها" />
         </div>
         {/* Navigation Buttons */}
         <button className="swiper-button-next-brand absolute top-2/3 -translate-y-1/2 right-2 z-10 bg-white shadow-md rounded-full p-2 cursor-pointer">

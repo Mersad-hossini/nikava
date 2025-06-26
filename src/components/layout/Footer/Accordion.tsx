@@ -8,12 +8,10 @@ function Accordion() {
   return (
     <div className="mt-10">
       <hr className="text-zinc-200" />
-
       <div className="mt-8">
-        {/* باکس محتوایی */}
         <div
           className={`relative overflow-hidden px-4 py-2 transition-all duration-500 ${
-            expanded ? "max-h-[500px]" : "h-40"
+            expanded ? "max-h-[600px]" : "h-40"
           }`}
         >
           <div className="space-y-2 text-sm text-zinc-600 leading-relaxed">
@@ -47,13 +45,11 @@ function Accordion() {
             </div>
           </div>
 
-          {/* گرادینت فقط در حالت بسته‌شده نمایش داده شود */}
           {!expanded && (
             <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-white to-transparent" />
           )}
         </div>
 
-        {/* دکمه نمایش بیشتر / کمتر */}
         <div className="flex text-blue-400 mt-4 px-4">
           <button
             onClick={() => setExpanded(!expanded)}

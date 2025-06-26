@@ -4,22 +4,21 @@ import React from "react";
 function AuthTemplate({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative flex justify-center items-center min-h-screen bg-gray-50">
-      {/* تصویر پس‌زمینه */}
+      {/* Background Image */}
       <Image
         src="/images/auth-background.png"
         alt="Background"
         layout="fill"
-        objectFit="cover" // برای تنظیم اندازه و پر کردن پس‌زمینه
-        quality={100} // تنظیم کیفیت تصویر
+        objectFit="cover"
+        quality={100}
         priority
         style={{
-          filter: "brightness(70%) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))", // سایه به تصویر
+          filter: "brightness(70%) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))",
         }}
       />
 
-      {/* فرم ورود و ثبت‌نام */}
       <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96 relative z-10">
-        {/* لوگو */}
+        {/* Nikava Logo */}
         <Image
           src="/images/nikava-logo.png"
           width={300}
@@ -29,7 +28,7 @@ function AuthTemplate({ children }: { children: React.ReactNode }) {
           className="w-40 mb-6 h-auto object-cover mx-auto"
         />
 
-        {/* عنوان صفحه ورود و ثبت‌نام */}
+        {/* signIn/Login Title */}
         <div className="flex items-center justify-center gap-x-3 mb-6">
           <span className="text-xl font-semibold text-center text-yellow-900">
             ورود
@@ -39,6 +38,7 @@ function AuthTemplate({ children }: { children: React.ReactNode }) {
             ثبت‌نام
           </span>
         </div>
+        {/* signIn/Login Form */}
         {children}
       </div>
     </div>

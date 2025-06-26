@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import Link from "next/link";
 import ItemCart from "./ItemCart";
@@ -39,6 +40,13 @@ function NavCart({ setIsCartOpen }: NavCartProps) {
     }
   };
 
+  const router = useRouter();
+
+  const handleGoToCart = () => {
+    setIsCartOpen(false);
+    router.push("/checkout/cart");
+  };
+
   return (
     <div
       className={`fixed inset-0 bg-black/70 z-60 transition-opacity duration-500 ${
@@ -73,7 +81,7 @@ function NavCart({ setIsCartOpen }: NavCartProps) {
           </span>
         </div> */}
 
-        {/* Cart Body */}
+        {/* Cart Body(image, title, count, discount, price) */}
         <div className="*:pb-5 *:mb-5 flex-wrap *:border-b *:border-b-gray-100 overflow-y-auto">
           <ItemCart />
           <ItemCart />
@@ -84,7 +92,8 @@ function NavCart({ setIsCartOpen }: NavCartProps) {
         {/* Cart Footer */}
         <div className="flex items-end justify-between gap-x-4 mt-auto">
           <Link
-            href="#"
+            onClick={handleGoToCart}
+            href="/checkout/cart"
             className="flex items-center justify-center h-11 w-28 text-white bg-teal-600 rounded-xl"
           >
             ثبت سفارش

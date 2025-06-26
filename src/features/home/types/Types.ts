@@ -1,13 +1,11 @@
-// types/Types.ts
-
-// اسلاید داخل هر استوری
+// Story Modal Types
 export interface SlideType {
     id: number;
     image: string;
     text: string;
 }
 
-// هر استوری شامل عکس کاور و لیست اسلایدها
+// Each Story has(title, cover, slides imade) Types
 export interface StoryType {
     id: number;
     title: string;
@@ -15,14 +13,14 @@ export interface StoryType {
     slides: SlideType[];
 }
 
-// 📌 کامپوننت مودال استوری
+// Story Modal Types
 export interface StoryModalProps {
     isOpen: boolean;
     story: StoryType | null;
     onClose: () => void;
 }
 
-// 📌 کامپوننت کارت استوری (StoryCard)
+// StoryCard
 export interface StoryCardProps {
     story: {
         id: number;
@@ -32,7 +30,7 @@ export interface StoryCardProps {
     onClick?: () => void;
 }
 
-// 📌 کامپوننت اسلایدر استوری‌ها (StoryCarousel)
+// StoryCarousel
 export interface StoryCarouselProps {
     stories: StoryType[];
     onStoryClick: (story: StoryType) => void;

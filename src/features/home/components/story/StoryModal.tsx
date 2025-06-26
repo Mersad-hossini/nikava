@@ -77,7 +77,6 @@ const StoryModal = ({ isOpen, story, onClose }: StoryModalProps) => {
           ))}
         </div>
 
-        {/* تصویر اسلاید */}
         <div className="relative w-full h-full">
           <Image
             src={slide.image}
@@ -89,12 +88,10 @@ const StoryModal = ({ isOpen, story, onClose }: StoryModalProps) => {
           />
         </div>
 
-        {/* متن اسلاید */}
         <div className="absolute bottom-0 left-0 w-full bg-black/40 text-white text-center py-2 text-sm">
           {slide.text}
         </div>
 
-        {/* دکمه‌ها */}
         {currentSlide > 0 && (
           <button
             onClick={handlePrev}

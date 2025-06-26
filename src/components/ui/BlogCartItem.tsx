@@ -3,7 +3,7 @@ import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-function BlogCart() {
+function BlogCartItem() {
   return (
     <div className="border border-gray-200 p-4 bg-white shadow-lg rounded-xl transition-shadow hover:shadow-xl duration-300 flex flex-col h-full">
       <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-tight">
@@ -48,4 +48,4 @@ function BlogCart() {
   );
 }
 
-export default BlogCart;
+export default BlogCartItem;

@@ -3,66 +3,100 @@ import React from "react";
 import { Archive, Instagram } from "lucide-react";
 import FooterSection from "./FooterSection";
 import Accordion from "./Accordion";
+import Link from "next/link";
+import GoToTop from "@/components/ui/GoToTop";
 
-const footerIcons = ["متن مرتبط", "متن مرتبط", "متن مرتبط", "متن مرتبط"];
+// Footer icons Text
+const footerIcons = [
+  { title: "سوالات متداول", href: "/questions" },
+  { title: "ارتباط با ما", href: "/contact-us" },
+  { title: "روش ارسال", href: "/about-us#sending-product" },
+  { title: "حریم شخصی", href: "/about-us#privacy" },
+];
 
+// Footer Links
 const aboutLinks = [
-  "اتاق خبر نیکاوا",
-  "فروش در نیکاوا",
-  "فرصت‌های شغلی",
-  "گزارش تخلف در نیکاوا",
-  "تماس با نیکاوا",
-  "درباره نیکاوا",
+  { title: "درباره نیکاوا", href: "/about-us" },
+  { title: "مدیریت نیکاوا", href: "/about-us#team" },
+  { title: "ارتباط با نیکاوا", href: "/contact-us" },
+  { title: "حریم خصوصی", href: "/about-us#privacy" },
 ];
-
+// Footer Links
 const customerLinks = [
-  "پاسخ به پرسش‌های متداول",
-  "رویه‌های بازگرداندن کالا",
-  "شرایط استفاده",
-  "حریم خصوصی",
-  "گزارش باگ",
+  { title: "پاسخ به پرسش‌های متداول", href: "/questions" },
+  { title: "رویه‌های بازگرداندن کالا", href: "/about-us#returning-goods" },
+  { title: "شیوه‌های پرداخت", href: "/about-us#payment" },
+  { title: "نحوه ثبت سفارش", href: "/about-us#order-registration" },
+  { title: "رویه ارسال سفارش", href: "/about-us#sending-product" },
 ];
 
-const guideLinks = ["نحوه ثبت سفارش", "رویه ارسال سفارش", "شیوه‌های پرداخت"];
-
+const guideLinks = [
+  "دیجیتال",
+  "آلات موسیقی",
+  "سوپر مارکت",
+  "مد و پوشاک",
+  "لپ تاپ",
+];
 function Footer() {
   return (
     <footer className="border-t border-zinc-200">
       <div className="px-5 pt-6">
-        {/* Logo */}
-        <div className="flex justify-center">
-          <Image
-            src="/images/nikava-logo.png"
-            width={120}
-            height={120}
-            alt="لوگوی نیکاوا"
-            priority
-            className="h-auto"
-          />
+        {/* Nikava Logo */}
+        <div className="flex flex-wrap justify-between items-center md:items-start">
+          <div className="flex flex-col items-center">
+            <Link href="#">
+              <Image
+                src="/images/nikava-logo.png"
+                width={120}
+                height={120}
+                alt="لوگوی نیکاوا"
+                priority
+                className="h-auto"
+              />
+            </Link>
+            <div className="mt-5">
+              <span className="text-sm text-zinc-500">شماره تماس: </span>
+              <span className="text-md text-zinc-500">09217045099</span>
+            </div>
+            <div className="mt-3">
+              <span className="text-sm text-zinc-500">شماره پیگیری: </span>
+              <span className="text-md text-zinc-500">555-110</span>
+            </div>
+            <div className="mt-3">
+              <span className="text-sm text-zinc-500">ایمیل: </span>
+              <span className="text-md text-zinc-500">nikava@gmail.com</span>
+            </div>
+          </div>
+          <GoToTop />
         </div>
 
-        {/* Icons */}
+        {/* Footer socials Icon */}
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-5 my-6">
-          {footerIcons.map((text, index) => (
+          {footerIcons.map((item, index) => (
             <div key={index} className="flex flex-col items-center py-3">
-              <Archive className="size-12" />
-              <span className="text-sm text-zinc-500 mt-2">{text}</span>
+              <Link href={item.href} className="flex flex-col items-center">
+                <Archive className="size-12" />
+                <span className="text-sm text-zinc-500 mt-2">{item.title}</span>
+              </Link>
             </div>
           ))}
         </div>
 
-        {/* Links */}
+        {/* Footer Links */}
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center xs:justify-items-normal text-center md:text-right">
           <FooterSection title="با نیکاوا" links={aboutLinks} />
           <FooterSection title="خدمات مشتریان" links={customerLinks} />
-          <FooterSection title="راهنمای خرید از نیکاوا" links={guideLinks} />
+          <FooterSection title="دسته بندی ها" links={guideLinks} />
 
           {/* Social & Email */}
           <div>
             <span className="text-lg font-bold">همراه ما باشید!</span>
             <div className="flex gap-x-8 mt-5 justify-center md:justify-start">
               {[...Array(4)].map((_, i) => (
-                <Instagram key={i} className="size-10 text-zinc-400" />
+                <Instagram
+                  key={i}
+                  className="size-10 text-zinc-400 hover:text-zinc-500 transition-colors cursor-pointer"
+                />
               ))}
             </div>
             <span className="text-md font-bold block my-8 text-center">
@@ -72,7 +106,7 @@ function Footer() {
               <input
                 type="text"
                 placeholder="ایمیل شما"
-                className="rounded-lg flex-1 h-10 bg-zinc-100 px-5 outline-0"
+                className="rounded-lg flex-1 h-10 bg-zinc-100 lg:px-4 outline-0"
               />
               <button className="btn py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition">
                 ثبت
@@ -80,7 +114,6 @@ function Footer() {
             </form>
           </div>
         </div>
-
 
         <Accordion />
 

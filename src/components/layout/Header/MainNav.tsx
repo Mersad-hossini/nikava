@@ -19,10 +19,10 @@ function MainNav() {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const [isUserBoxOpen, setIsUserBoxOpen] = useState<boolean>(false);
   const userBoxRef = useRef<HTMLDivElement>(null);
-  const userBoxButtonRef = useRef<HTMLDivElement>(null); // برای ارجاع به دکمه آیکون
+  const userBoxButtonRef = useRef<HTMLDivElement>(null); 
 
   const toggleUserBox = (event: React.MouseEvent) => {
-    event.stopPropagation(); // جلوگیری از بسته شدن هنگام کلیک روی دکمه
+    event.stopPropagation();
     setIsUserBoxOpen((prevState) => !prevState);
   };
 
@@ -49,14 +49,18 @@ function MainNav() {
 
   return (
     <>
-      <div className="hidden lg:flex items-center">
+      <div className="relative hidden lg:flex items-center">
         <Link href="#" className="ml-6">
           <Bell />
+          {/* Badge number for bell */}
+          <div className="absolute flex items-center justify-center -top-1 -right-1 size-4 rounded-full bg-green-500 text-white text-xs">
+            8
+          </div>
         </Link>
 
         <div className="hidden lg:flex relative">
           <div
-            ref={userBoxButtonRef} // ارجاع به دکمه آیکون کاربری
+            ref={userBoxButtonRef}
             className="flex items-center cursor-pointer"
             onClick={toggleUserBox}
           >
@@ -76,7 +80,6 @@ function MainNav() {
                     </div>
                   </Link>
                   <ul className="space-y-2 p-4 pt-2 rounded-lg">
-
                     <li className="border-b border-gray-100">
                       <Link href="/profile/orders">
                         <div className="flex items-center text-zinc-600 text-sm font-bold hover:bg-gray-100 p-2 rounded-lg">
@@ -124,7 +127,6 @@ function MainNav() {
                         </div>
                       </Link>
                     </li>
-
                   </ul>
                 </div>
               </div>

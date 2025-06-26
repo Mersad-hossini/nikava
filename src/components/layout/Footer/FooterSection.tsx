@@ -1,15 +1,27 @@
 import Link from "next/link";
 import React from "react";
 
-function FooterSection({ title, links }: { title: string; links: string[] }) {
+// نوع قابل‌انعطاف برای لینک‌ها: یا رشته ساده یا آبجکت با title/href
+type FooterLink = string | { title: string; href: string };
+
+function FooterSection({
+  title,
+  links,
+}: {
+  title: string;
+  links: FooterLink[];
+}) {
   return (
     <div>
       <span className="text-lg font-bold">{title}</span>
       <ul className="flex flex-col gap-3 mt-3">
         {links.map((link, idx) => (
           <li key={idx}>
-            <Link href="#" className="text-sm text-zinc-500">
-              {link}
+            <Link
+              href={typeof link === "string" ? "#" : link.href}
+              className="text-sm text-zinc-500 hover:text-zinc-600 hover:font-bold transition"
+            >
+              {typeof link === "string" ? link : link.title}
             </Link>
           </li>
         ))}

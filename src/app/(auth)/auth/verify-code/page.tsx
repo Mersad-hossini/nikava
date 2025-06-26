@@ -1,5 +1,5 @@
 import React from "react";
-import VerifyCode from "@/features/auth/VerifyCode";
+import VerifyCode from "@/features/Auth/VerifyCode";
 
 function page() {
   return <VerifyCode />;

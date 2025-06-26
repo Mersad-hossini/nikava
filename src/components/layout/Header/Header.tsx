@@ -1,33 +1,50 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { Bell, Search } from "lucide-react";
 import Image from "next/image";
 import NavLinks from "./NavLinks";
 import TopBar from "./TopBar";
 import MainNav from "./MainNav";
 import MobileBottomNav from "./MobileBottomNav";
+import Link from "next/link";
 
 function Header() {
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="shadow-md">
+    <header className="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
       <TopBar />
 
       <nav className="mt-3 mx-6 pb-3 lg:pb-0">
-        <div className="lg:flex lg:justify-between items-center">
+        <div className="lg:flex pb-3 lg:justify-between items-center">
           {/* Right Side Nav */}
           <div className="flex">
             {/* Logo */}
             <div className="hidden lg:flex items-center ml-5">
-              <Image
-                src="/images/nikava-logo.png"
-                width={120}
-                height={120}
-                alt="Picture of the author"
-                priority
-                className="h-auto"
-              />
+              <Link href="/">
+                <Image
+                  src="/images/nikava-logo.png"
+                  width={120}
+                  height={120}
+                  alt="Picture of the author"
+                  priority
+                  className="h-auto"
+                />
+              </Link>
             </div>
             {/* Search Input */}
-            <form className="relative bg-zinc-200 w-full lg:w-144 rounded-sm flex items-center">
+            <form className="relative bg-zinc-100 w-full lg:w-144 rounded-sm flex items-center">
               <input
                 type="text"
                 placeholder="جستجو"
@@ -39,9 +56,15 @@ function Header() {
               </div>
             </form>
             {/* Bell For Smaller Size(1030px) */}
-            <div className="flex lg:hidden bg-zinc-200 rounded-full p-2 mr-2">
-              <Bell />
-            </div>
+            <Link href="#">
+              {/* Badge number for bell */}
+              <div className="relative flex lg:hidden bg-zinc-200 rounded-full p-2 mr-2">
+                <Bell />
+                <div className="absolute flex items-center justify-center -top-1 right-0 size-4 rounded-full bg-green-500 text-white text-xs">
+                  8
+                </div>
+              </div>
+            </Link>
           </div>
 
           {/* Left Side Nav */}
@@ -50,6 +73,7 @@ function Header() {
         {/* Nav Links */}
 
         <NavLinks />
+
         <MobileBottomNav />
       </nav>
     </header>

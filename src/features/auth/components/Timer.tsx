@@ -1,3 +1,4 @@
+// Timer to resend code
 const Timer = ({ timer }: { timer: number }) => {
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);

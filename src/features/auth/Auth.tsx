@@ -15,7 +15,6 @@ function Auth() {
             />
           </div>
 
-          {/* دکمه ادامه */}
           <Link
             href="/auth/verify-code"
             className="inline-block text-center w-full py-3 bg-yellow-500 cursor-pointer text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300 text-lg"
@@ -23,13 +22,12 @@ function Auth() {
             ادامه
           </Link>
 
-          {/* بخش شرایط و قوانین */}
           <div className="text-center mt-6 text-sm text-gray-600">
             <span>ورود | ثبت نام شما به معنای پذیرش </span>
             <Link href="#" className="text-blue-600 hover:underline">
               قوانین و مقررات
-            </Link>{" "}
-            <span>نیکاوا است.</span>
+            </Link>
+            <span> نیکاوا است.</span>
           </div>
         </form>
       </AuthTemplate>
