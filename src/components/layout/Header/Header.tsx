@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Bell, Search } from "lucide-react";
+import { Bell } from "lucide-react";
 import Image from "next/image";
 import NavLinks from "./NavLinks";
 import TopBar from "./TopBar";
 import MainNav from "./MainNav";
 import MobileBottomNav from "./MobileBottomNav";
 import Link from "next/link";
+import SearchInput from "./SearchInput";
 
 function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -44,17 +45,8 @@ function Header() {
               </Link>
             </div>
             {/* Search Input */}
-            <form className="relative bg-zinc-100 w-full lg:w-144 rounded-sm flex items-center">
-              <input
-                type="text"
-                placeholder="جستجو"
-                className="outline-0 w-full pr-12 py-2"
-              />
-              <div className="absolute flex items-center h-full cursor-pointer right-0.5 pr-2">
-                <Search className="text-zinc-400 size-5" />
-                <div className="h-8 border-l border-gray-300 mr-2" />
-              </div>
-            </form>
+
+            <SearchInput />
             {/* Bell For Smaller Size(1030px) */}
             <Link href="#">
               {/* Badge number for bell */}

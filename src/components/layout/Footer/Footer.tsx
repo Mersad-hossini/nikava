@@ -20,7 +20,7 @@ const aboutLinks = [
   { title: "مدیریت نیکاوا", href: "/about-us#team" },
   { title: "ارتباط با نیکاوا", href: "/contact-us" },
   { title: "وبلاگ ها", href: "/blog" },
-  { title: "حریم خصوصی", href: "/about-us#privacy" },
+  { title: "علاقه مندی ها", href: "/wishlist" },
 ];
 // Footer Links
 const customerLinks = [

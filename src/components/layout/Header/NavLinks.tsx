@@ -6,7 +6,7 @@ import NavLink from "./NavLink";
 
 export default function NavLinks() {
   return (
-    <div className="hidden lg:flex items-center relative">
+    <div className="hidden lg:flex items-center relative pb-1">
       <div className="relative flex items-center cursor-pointer px-4">
         <AlignRight className="size-5 ml-1" />
         <span className="text-sm font-bold text-gray-800">

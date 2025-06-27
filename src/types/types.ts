@@ -4,3 +4,11 @@ export interface NavLinkProps {
   title: string;
   href: string;
 }
+
+// types/Product.ts
+export interface ProductType {
+  id: number;
+  title: string;
+  price: string;
+  image: string;
+}

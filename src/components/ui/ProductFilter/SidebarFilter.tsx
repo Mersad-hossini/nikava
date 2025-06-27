@@ -1,7 +1,7 @@
-import React from "react";
 import { FilterIcon } from "lucide-react";
+import React from "react";
 
-export default function CategoryFilter() {
+function SidebarFilter() {
   return (
     <div className="border border-gray-200 rounded-xl p-4 shadow-sm">
       <div className="flex gap-2 items-center mb-3">
@@ -43,3 +43,6 @@ export default function CategoryFilter() {
     </div>
   );
 }
+
+export default SidebarFilter;
+  

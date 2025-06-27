@@ -1,10 +1,10 @@
 import React from "react";
 
-type CategorySortProps = {
+type SortToolbarProps = {
   productCount: number;
 };
 
-export default function CategorySort({ productCount }: CategorySortProps) {
+export default function SortToolbar({ productCount }: SortToolbarProps) {
   return (
     <div className="flex flex-wrap gap-3 items-center justify-between bg-zinc-50 px-4 py-3 rounded-xl shadow-sm border border-gray-200">
       <div className="hidden md:flex gap-2 flex-wrap">

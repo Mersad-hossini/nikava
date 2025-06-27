@@ -1,9 +1,10 @@
 import React from "react";
 import ProductCard from "@/components/ui/ProductCard/ProductCard";
+import { ProductType } from "@/types/types";
 
-type CategoryProductGridProps = {
-  products: number[];
-};
+interface CategoryProductGridProps {
+  products: ProductType[];
+}
 
 export default function CategoryProductGrid({
   products,

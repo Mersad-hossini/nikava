@@ -1,15 +1,22 @@
+// app/search/page.tsx
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
+import ProductListingLayout from "@/components/shared/ProductListingLayout";
+import SortToolbar from "@/components/ui/ProductFilter/SortToolbar";
+import CategoryProductGrid from "@/components/ui/ProductFilter/CategoryProductGrid";
 import Pagination from "@/components/ui/Pagination";
 import { usePagination } from "@/hooks/usePagination";
-import CategoryProductGrid from "../../components/ui/ProductFilter/CategoryProductGrid";
-import SortToolbar from "@/components/ui/ProductFilter/SortToolbar";
-import ProductListingLayout from "@/components/shared/ProductListingLayout";
 import { ProductType } from "@/types/types";
 import FilterSidebarWrapper from "@/components/ui/ProductFilter/FilterSidebarWrapper";
 
-export default function CategoryDetails() {
+export default function SearchPage() {
+  // فرضی: لیست کامل محصولات برای جستجو (در حالت واقعی از API یا سرور می‌گیری)
+  // const searchParams = useSearchParams();
+  //   const query = searchParams.get("q") || "";
+  //   const allProducts: ProductType[] = dummyProducts.filter((p) =>
+  //     p.title.toLowerCase().includes(query.toLowerCase())
+  //   );
   const allProducts: ProductType[] = Array.from({ length: 42 }, (_, i) => ({
     id: i + 1,
     title: `محصول شماره ${i + 1}`,
@@ -39,7 +46,7 @@ export default function CategoryDetails() {
           onPageChange={setCurrentPage}
         />
       }
-      breadcrumbTitle="دسته بندی ها"
+      breadcrumbTitle="جستجو"
     />
   );
 }
