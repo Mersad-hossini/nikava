@@ -19,6 +19,7 @@ const aboutLinks = [
   { title: "درباره نیکاوا", href: "/about-us" },
   { title: "مدیریت نیکاوا", href: "/about-us#team" },
   { title: "ارتباط با نیکاوا", href: "/contact-us" },
+  { title: "وبلاگ ها", href: "/blog" },
   { title: "حریم خصوصی", href: "/about-us#privacy" },
 ];
 // Footer Links

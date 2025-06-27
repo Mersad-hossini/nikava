@@ -10,7 +10,7 @@ import MultiBanner from "./components/Banner/MultiBanner";
 import SingleBanner from "./components/Banner/SingleBanner";
 import Brands from "./components/Brands/Brands";
 import Blog from "./components/Blog/Blog";
-import ProductItem from "./components/ProductItem/ProductItem";
+import ProductCarousel from "./components/ProductCarousel/ProductCarousel";
 
 const storiesApi = [
   {
@@ -102,7 +102,7 @@ function Home() {
       <Slider />
       <HomeCategories />
 
-      <ProductItem />
+      <ProductCarousel />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-5 sm:px-15 mb-10">
         <MultiBanner />
@@ -110,9 +110,9 @@ function Home() {
         <MultiBanner />
         <MultiBanner />
       </div>
-      <ProductItem />
+      <ProductCarousel />
       <SingleBanner />
-      <ProductItem />
+      <ProductCarousel />
       <Brands />
       <Blog />
     </div>

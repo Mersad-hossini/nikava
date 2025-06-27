@@ -70,10 +70,27 @@ export default function ProductCard() {
       <ProductTimerBadge discount={25} time={timeLeft} />
 
       {/* Product Infos */}
-      <div className="space-y-1 text-right">
+      <div dir="rtl" className="space-y-1 text-right">
         <h3 className="text-sm font-semibold text-zinc-800 leading-5">
           هندزفری بلوتوثی مدل AirBuds Pro Max
         </h3>
+        {/* Product Rating */}
+        <div className="flex items-center gap-1 my-2">
+          {[...Array(5)].map((_, i) => (
+            <svg
+              key={i}
+              className={`w-4 h-4 ${
+                i < 4
+                  ? "fill-yellow-400 text-yellow-400"
+                  : "fill-gray-300 text-gray-300"
+              }`}
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 .587l3.668 7.568L24 9.75l-6 5.85L19.336 24 12 19.897 4.664 24 6 15.6 0 9.75l8.332-1.595z" />
+            </svg>
+          ))}
+          <span className="text-xs text-zinc-500 mr-1">(۴.۵)</span>
+        </div>
         <div className="flex items-center justify-between mt-1">
           <span className="text-xs line-through text-zinc-400">۱,۵۸۰,۰۰۰</span>
           <span className="text-red-600 font-bold text-sm">
