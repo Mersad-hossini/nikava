@@ -4,9 +4,11 @@ import { Menu, Store, House, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import NavCart from "./NavCart";
+import CategoryDropdownMobile from "./CategoryDropdownMobile";
 
 const MobileBottomNav = () => {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
+  const [showCategories, setShowCategories] = useState(false);
 
   return (
     <>
@@ -19,11 +21,17 @@ const MobileBottomNav = () => {
             </Link>
           </li>
           <li>
-            <Link href="#" className="flex flex-col items-center">
+            <button
+              onClick={() => setShowCategories(true)}
+              className="flex flex-col items-center cursor-pointer"
+            >
               <Menu className="size-5" />
-              <span>دسته بندی ها</span>
-            </Link>
+              <span>دسته بندی‌ها</span>
+            </button>
           </li>
+          {showCategories && (
+            <CategoryDropdownMobile onClose={() => setShowCategories(false)} />
+          )}
           <li>
             <div
               className="flex flex-col items-center cursor-pointer"
