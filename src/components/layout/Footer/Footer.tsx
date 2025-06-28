@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { Archive, Instagram } from "lucide-react";
 import FooterSection from "./FooterSection";
 import Accordion from "./Accordion";
 import Link from "next/link";
@@ -8,10 +7,37 @@ import GoToTop from "@/components/ui/GoToTop";
 
 // Footer icons Text
 const footerIcons = [
-  { title: "سوالات متداول", href: "/questions" },
-  { title: "ارتباط با ما", href: "/contact-us" },
-  { title: "روش ارسال", href: "/about-us#sending-product" },
-  { title: "حریم شخصی", href: "/about-us#privacy" },
+  { title: "سوالات متداول", img: "/images/question.png", href: "/questions" },
+  { title: "ارتباط با ما", img: "/images/chat.png", href: "/contact-us" },
+  {
+    title: "روش ارسال",
+    img: "/images/cash-on-delivery.png",
+    href: "/about-us#sending-product",
+  },
+  {
+    title: "حریم شخصی",
+    img: "/images/insurance.png",
+    href: "/about-us#privacy",
+  },
+];
+
+// Social Icons
+const socialIcons = [
+  {
+    img: "/images/telegram.png",
+    href: "https://web.telegram.org/a/",
+    alt: "telegram",
+  },
+  {
+    img: "/images/instagram.png",
+    href: "https://www.instagram.com/",
+    alt: "instagram",
+  },
+  {
+    img: "/images/whatsapp.png",
+    href: "https://web.whatsapp.com/",
+    alt: "whatsApp",
+  },
 ];
 
 // Footer Links
@@ -76,7 +102,13 @@ function Footer() {
           {footerIcons.map((item, index) => (
             <div key={index} className="flex flex-col items-center py-3">
               <Link href={item.href} className="flex flex-col items-center">
-                <Archive className="size-12" />
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  width={128}
+                  height={128}
+                  className="size-14"
+                />
                 <span className="text-sm text-zinc-500 mt-2">{item.title}</span>
               </Link>
             </div>
@@ -92,12 +124,22 @@ function Footer() {
           {/* Social & Email */}
           <div>
             <span className="text-lg font-bold">همراه ما باشید!</span>
-            <div className="flex gap-x-8 mt-5 justify-center md:justify-start">
-              {[...Array(4)].map((_, i) => (
-                <Instagram
+            <div className="flex gap-x-6 mt-5 justify-center md:justify-start">
+              {socialIcons.map((item, i) => (
+                <Link
                   key={i}
-                  className="size-10 text-zinc-400 hover:text-zinc-500 transition-colors cursor-pointer"
-                />
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={item.img}
+                    alt={item.alt}
+                    width={40}
+                    height={40}
+                    className="cursor-pointer"
+                  />
+                </Link>
               ))}
             </div>
             <span className="text-md font-bold block my-8 text-center">

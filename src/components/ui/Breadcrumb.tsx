@@ -4,7 +4,7 @@ import Link from "next/link";
 
 interface BreadcrumbItem {
   title: string;
-  href?: string; // آخرین آیتم بدون لینک است
+  href?: string; 
 }
 
 interface BreadcrumbProps {

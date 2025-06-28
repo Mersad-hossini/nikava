@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
 
-// نوع قابل‌انعطاف برای لینک‌ها: یا رشته ساده یا آبجکت با title/href
 type FooterLink = string | { title: string; href: string };
 
 function FooterSection({

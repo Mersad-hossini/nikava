@@ -11,7 +11,7 @@ export default function FilterSidebarWrapper() {
 
   return (
     <>
-      {/* دکمه‌ی فیلتر در موبایل */}
+      {/* Filter button on mobile */}
       <div className="flex md:hidden mb-4">
         <button
           onClick={() => setIsFilterOpen(true)}
@@ -22,12 +22,12 @@ export default function FilterSidebarWrapper() {
         </button>
       </div>
 
-      {/* فیلتر دسکتاپ */}
+      {/* Desktop filter */}
       <aside className="hidden md:block">
         <SidebarFilter />
       </aside>
 
-      {/* فیلتر موبایل */}
+      {/* Mobile filter */}
       <MobileFilterDrawer
         isFilterOpen={isFilterOpen}
         setIsFilterOpen={setIsFilterOpen}

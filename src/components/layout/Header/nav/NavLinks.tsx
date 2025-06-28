@@ -3,7 +3,7 @@
 import { Clock, File, Flame, Phone, Store } from "lucide-react";
 import React from "react";
 import NavLink from "./NavLink";
-import CategoryDropdown from "./CategoryDropdown";
+import CategoryDropdown from "../dropdown/CategoryDropdown";
 
 export default function NavLinks() {
   return (

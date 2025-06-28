@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { Star, Plus, Heart, Instagram } from "lucide-react";
+import { Star, Plus, Heart } from "lucide-react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs } from "swiper/modules";
@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/thumbs";
 import ProductTabs from "./components/ProductTabs";
 import ProductCarousel from "./components/ProductCard";
+import SocialShare from "./components/socialIcons";
 
 export default function ProductDetail() {
   const [thumbsSwiper, setThumbsSwiper] = useState<null>(null);
@@ -102,11 +103,11 @@ export default function ProductDetail() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
-            <button className="inline-flex items-center gap-2 px-5 py-2.5 bg-black text-white rounded-xl hover:bg-zinc-800 transition text-sm">
+            <button className="inline-flex cursor-pointer items-center gap-2 px-5 py-2.5 bg-black text-white rounded-xl hover:bg-zinc-800 transition text-sm">
               <Plus className="w-4 h-4" />
               افزودن به سبد خرید
             </button>
-            <button className="inline-flex items-center gap-2 px-4 py-2.5 text-sm border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-100 transition">
+            <button className="inline-flex cursor-pointer items-center gap-2 px-4 py-2.5 text-sm border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-100 transition">
               <Heart className="w-4 h-4" />
               افزودن به علاقه‌مندی‌ها
             </button>
@@ -131,15 +132,7 @@ export default function ProductDetail() {
             </div>
 
             {/* Social Share */}
-            <div className="flex items-center gap-3">
-              <span className="font-semibold text-gray-800">اشتراک‌گذاری:</span>
-              {[...Array(4)].map((_, i) => (
-                <Instagram
-                  key={i}
-                  className="w-4 h-4 text-zinc-500 hover:text-black transition"
-                />
-              ))}
-            </div>
+            <SocialShare />
           </div>
         </div>
       </div>

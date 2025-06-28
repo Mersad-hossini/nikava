@@ -5,7 +5,7 @@ export interface NavLinkProps {
   href: string;
 }
 
-// types/Product.ts
+// Product types
 export interface ProductType {
   id: number;
   title: string;

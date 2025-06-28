@@ -13,7 +13,7 @@ import {
   ShoppingCart,
 } from "lucide-react";
 import Link from "next/link";
-import NavCart from "./NavCart";
+import NavCart from "../cart/NavCart";
 
 function MainNav() {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);

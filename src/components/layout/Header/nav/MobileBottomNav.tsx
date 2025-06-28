@@ -3,8 +3,8 @@
 import { Menu, Store, House, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import NavCart from "./NavCart";
-import CategoryDropdownMobile from "./CategoryDropdownMobile";
+import NavCart from "../cart/NavCart";
+import CategoryDropdownMobile from "../dropdown/CategoryDropdownMobile";
 
 const MobileBottomNav = () => {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);

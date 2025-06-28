@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from "react";
 import { Bell } from "lucide-react";
 import Image from "next/image";
-import NavLinks from "./NavLinks";
+import NavLinks from "./nav/NavLinks";
 import TopBar from "./TopBar";
-import MainNav from "./MainNav";
-import MobileBottomNav from "./MobileBottomNav";
+import MainNav from "./nav/MainNav";
+import MobileBottomNav from "./nav/MobileBottomNav";
 import Link from "next/link";
 import SearchInput from "./SearchInput";
 
