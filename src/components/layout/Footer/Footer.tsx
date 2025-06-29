@@ -71,7 +71,7 @@ function Footer() {
         {/* Nikava Logo */}
         <div className="flex flex-wrap justify-between items-center md:items-start">
           <div className="flex flex-col items-center">
-            <Link href="#">
+            <Link href="/">
               <Image
                 src="/images/nikava-logo.png"
                 width={120}
