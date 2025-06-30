@@ -48,7 +48,7 @@ const MobileBottomNav = () => {
             </Link>
           </li>
           <li>
-            <Link href="#" className="flex flex-col items-center">
+            <Link href="/dashboard" className="flex flex-col items-center">
               <User className="size-5" />
               <span>پنل کاربری</span>
             </Link>

@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 const comments = [
   {
@@ -31,7 +32,14 @@ export default function ProductComments() {
         >
           {/* هدر: نام کاربر و تاریخ */}
           <div className="flex items-center justify-between text-sm text-zinc-500">
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2">
+              <Image
+                src="/images/mersad.jpg"
+                width={48}
+                height={48}
+                alt="user avatar"
+                className="size-8 rounded-full"
+              />
               <span className="font-semibold text-zinc-800">
                 {comment.name}
               </span>

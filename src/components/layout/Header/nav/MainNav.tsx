@@ -50,7 +50,7 @@ function MainNav() {
   return (
     <>
       <div className="relative hidden lg:flex items-center">
-        <div className="ml-2">
+        <div className="ml-4">
           <NotificationBell />
         </div>
 
