@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Tickets from "@/features/Dashboard/components/Tickets/Tickets";
 
 function TicketsPage() {
-  return (
-    <div>TicketsPage</div>
-  )
+  return <Tickets />;
 }
 
-export default TicketsPage
+export default TicketsPage;

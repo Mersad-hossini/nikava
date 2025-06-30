@@ -1,10 +1,8 @@
-import Wishlist from '@/features/Wishlist/wishlist'
-import React from 'react'
+import Wishlist from "@/features/Dashboard/components/Wishlist/Wishlist";
+import React from "react";
 
 function WishlistPage() {
-  return (
-    <Wishlist />
-  )
+  return <Wishlist />;
 }
 
-export default WishlistPage
+export default WishlistPage;

@@ -3,7 +3,7 @@ import React from "react";
 
 function DashboardTicket() {
   return (
-    <div className="border border-zinc-300 rounded-xl p-4 bg-zinc-300 shadow flex flex-col gap-4">
+    <div className="border border-zinc-100 rounded-xl p-4 bg-zinc-100 shadow-md flex flex-col gap-4">
       <div className="font-medium">متن تیکت</div>
       <div className="flex justify-between items-center text-sm">
         <div className="flex gap-2">

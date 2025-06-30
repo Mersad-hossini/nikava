@@ -45,7 +45,6 @@ function Header() {
               </Link>
             </div>
             {/* Search Input */}
-
             <SearchInput />
             {/* Bell For Smaller Size(1030px) */}
             <Link href="#">

@@ -43,7 +43,7 @@ function Questions() {
           className="collapse collapse-arrow bg-white border border-gray-200 rounded-xl shadow-sm transition hover:shadow-md"
         >
           <input
-            type="radio"
+            type="checkbox"
             name="faq" 
           />
           <div className="collapse-title text-base md:text-lg font-semibold text-gray-800">

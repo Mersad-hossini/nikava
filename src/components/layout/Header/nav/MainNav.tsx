@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import {
-  Bell,
   User,
   ChevronDown,
   ChevronLeft,
@@ -14,12 +13,13 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import NavCart from "../cart/NavCart";
+import NotificationBell from "@/components/ui/NotificationBell/NotificationBell";
 
 function MainNav() {
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const [isUserBoxOpen, setIsUserBoxOpen] = useState<boolean>(false);
   const userBoxRef = useRef<HTMLDivElement>(null);
-  const userBoxButtonRef = useRef<HTMLDivElement>(null); 
+  const userBoxButtonRef = useRef<HTMLDivElement>(null);
 
   const toggleUserBox = (event: React.MouseEvent) => {
     event.stopPropagation();
@@ -50,13 +50,9 @@ function MainNav() {
   return (
     <>
       <div className="relative hidden lg:flex items-center">
-        <Link href="#" className="ml-6">
-          <Bell />
-          {/* Badge number for bell */}
-          <div className="absolute flex items-center justify-center -top-1 -right-1 size-4 rounded-full bg-green-500 text-white text-xs">
-            8
-          </div>
-        </Link>
+        <div className="ml-2">
+          <NotificationBell />
+        </div>
 
         <div className="hidden lg:flex relative">
           <div
@@ -71,7 +67,7 @@ function MainNav() {
             <div className="absolute top-6 left-0 z-20" ref={userBoxRef}>
               <div className="flex justify-center shadow-lg rounded-lg items-center bg-gray-50">
                 <div className="bg-white rounded-lg shadow-2xl w-full lg:w-70">
-                  <Link href="#">
+                  <Link href="/dashboard">
                     <div className="flex justify-between items-center rounded-lg p-4 border-t-2 border-b-1 border-t-yellow-500 border-b-gray-100 text-neutral-700 hover:bg-gray-100">
                       <span className="font-semibold text-md">
                         مرصاد محمد حسینی
@@ -81,7 +77,7 @@ function MainNav() {
                   </Link>
                   <ul className="space-y-2 p-4 pt-2 rounded-lg">
                     <li className="border-b border-gray-100">
-                      <Link href="/profile/orders">
+                      <Link href="/dashboard/orders">
                         <div className="flex items-center text-zinc-600 text-sm font-bold hover:bg-gray-100 p-2 rounded-lg">
                           <Package className="ml-2" />
                           <div className="flex items-center justify-between w-full">
@@ -93,7 +89,7 @@ function MainNav() {
                     </li>
 
                     <li className="border-b border-gray-100">
-                      <Link href="/profile/orders">
+                      <Link href="/dashboard/wishlist">
                         <div className="flex items-center text-zinc-600 text-sm font-bold hover:bg-gray-100 p-2 rounded-lg">
                           <Heart className="ml-2" />
                           <div className="flex items-center justify-between w-full">
@@ -105,7 +101,7 @@ function MainNav() {
                     </li>
 
                     <li className="border-b border-gray-100">
-                      <Link href="/profile/orders">
+                      <Link href="/dashboard/profile">
                         <div className="flex items-center text-zinc-600 text-sm font-bold hover:bg-gray-100 p-2 rounded-lg">
                           <SquarePen className="ml-2" />
                           <div className="flex items-center justify-between w-full">

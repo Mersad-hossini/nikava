@@ -27,7 +27,7 @@ function LatestOrder() {
       {orders.map((order) => (
         <div
           key={order.id}
-          className="border border-zinc-300 rounded-lg shadow bg-zinc-300 p-4 flex flex-col gap-3"
+          className="border border-zinc-100 rounded-lg shadow-md bg-zinc-100 p-4 flex flex-col gap-3"
         >
           <div className="flex items-center justify-between text-sm font-medium">
             <span>سفارش #{order.id}</span>
@@ -42,12 +42,12 @@ function LatestOrder() {
 
             <div>
               <span
-                className={`px-2 py-1 text-xs text-white rounded-full whitespace-nowrap ${
+                className={`inline-block px-2 py-1 text-xs rounded-full font-medium ${
                   order.status === "تحویل‌شده"
-                    ? "bg-green-600"
-                    : order.status === "درحال پردازش"
-                    ? "bg-yellow-600"
-                    : "bg-red-600"
+                    ? "bg-green-100 text-green-700"
+                    : order.status === "در حال پردازش"
+                    ? "bg-yellow-100 text-yellow-600"
+                    : "bg-red-100 text-red-700"
                 }`}
               >
                 {order.status}

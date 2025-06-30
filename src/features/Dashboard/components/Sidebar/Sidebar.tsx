@@ -50,7 +50,7 @@ export default function Sidebar() {
       </div>
 
       {/* 🔹 Sidebar for Desktop (sticky) */}
-      <div className="hidden lg:flex sticky top-4 right-4 h-[calc(100vh-2rem)] w-64 bg-zinc-200 text-zinc-900 p-4 shadow-md flex-col justify-between rounded-xl border border-zinc-300 z-40">
+      <div className="hidden lg:flex sticky top-4 right-4 h-[calc(100vh-2rem)] w-64 bg-zinc-100 text-zinc-900 p-4 shadow-md flex-col justify-between rounded-xl border border-zinc-100 z-40">
         <Link href="/" className="mb-6 flex justify-center">
           <Image
             src="/images/nikava-logo.png"
@@ -73,7 +73,7 @@ export default function Sidebar() {
       {/* 🔹 Sidebar for Mobile (fixed) */}
       <div
         ref={sidebarRef}
-        className={`fixed lg:hidden top-4 right-0 z-50 h-[calc(100vh-2rem)] w-64 bg-zinc-200 text-zinc-800 p-4 shadow-md flex flex-col justify-between rounded-xl border border-zinc-300 transition-transform duration-300
+        className={`fixed lg:hidden top-4 right-0 z-50 h-[calc(100vh-2rem)] w-64 bg-zinc-100 text-zinc-800 p-4 shadow-md flex flex-col justify-between rounded-xl border border-zinc-100 transition-transform duration-300
         ${isOpen ? "translate-x-0 right-4" : "translate-x-full"}
       `}
       >

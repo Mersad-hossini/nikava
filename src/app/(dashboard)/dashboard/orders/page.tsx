@@ -1,7 +1,8 @@
+import Orders from "@/features/Dashboard/components/Orders/Orders";
 import React from "react";
 
 function OrdersPage() {
-  return <div>OrdersPage</div>;
+  return <Orders />;
 }
 
 export default OrdersPage;
