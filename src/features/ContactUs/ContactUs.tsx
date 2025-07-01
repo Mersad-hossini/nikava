@@ -1,11 +1,11 @@
 import React from "react";
 import { Mail, Map, Phone } from "lucide-react";
-import ContactInput from "./ContactInput";
+import FormInput from "@/components/ui/FormInput/FormInput";
 
 function ContactUs() {
   return (
-    <div className="w-full px-4 py-12 flex justify-center my-4 bg-gray-50">
-      <div className="w-full max-w-4xl bg-white shadow-md rounded-2xl p-8">
+    <div className="w-full p-4 flex justify-center bg-zinc-100">
+      <div className="w-full max-w-4xl bg-white shadow-lg rounded-2xl p-8">
         {/* Title */}
         <div className="text-center mb-10">
           <h2 className="text-3xl font-semibold text-gray-800">تماس با ما</h2>
@@ -18,18 +18,32 @@ function ContactUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Contact Form */}
           <div>
-            <form className="space-y-5 p-2 bg-white/70 backdrop-blur-md shadow-lg ring-1 rounded-2xl ring-gray-100">
-              <ContactInput title="نام" />
-              <ContactInput title="ایمیل" />
-              <ContactInput title="موضوع" />
-              <textarea
-                rows={5}
-                className="w-full border resize-none border-gray-200 rounded-2xl p-3 text-sm bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
+            <form className="space-y-8 p-5  bg-white/70 backdrop-blur-md shadow-lg ring-1 rounded-2xl ring-gray-100">
+              <FormInput as="input" name="نام" type="نام" placeholder="نام" />
+              <FormInput
+                as="input"
+                name="ایمیل"
+                type="email"
+                placeholder="ایمیل"
+              />
+              <FormInput
+                as="input"
+                name="موضوع"
+                type="text"
+                placeholder="موضوع"
+              />
+
+              <FormInput
+                as="textarea"
+                name="متن پیام"
+                type="text"
                 placeholder="متن پیام"
-              ></textarea>
+                rows={5}
+              />
+
               <button
                 type="submit"
-                className="w-full bg-black text-white text-sm py-3 rounded-2xl hover:bg-gray-900 transition cursor-pointer"
+                className="w-full bg-zinc-700 text-white text-sm px-5 py-2 rounded-md hover:bg-zinc-800 transition cursor-pointer"
               >
                 ارسال پیام
               </button>
@@ -43,7 +57,7 @@ function ContactUs() {
                 <Map className="ml-2 w-5 h-5" />
                 <span className="font-medium">آدرس:</span>
               </div>
-              <p className="text-gray-500">تهران، خیابان فلان، کوچه فلان</p>
+              <p className="text-gray-500">تهران، ملاصدرا، کوچه 17</p>
             </div>
             <div>
               <div className="flex items-center mb-2 text-gray-600">

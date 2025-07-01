@@ -1,7 +1,8 @@
+import Profile from "@/features/Dashboard/components/Profile/Profile";
 import React from "react";
 
 function ProfilePage() {
-  return <div>ProfilePage</div>;
+  return <Profile />;
 }
 
 export default ProfilePage;

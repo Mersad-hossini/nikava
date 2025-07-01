@@ -48,7 +48,7 @@ export default function Dashboard() {
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <ListOrdered className="text-red-500" />
-            <h1 className="text-xl font-bold text-zinc-800 ">سفارش‌های من</h1>
+            <h1 className="text-xl font-bold text-zinc-800 ">سفارش‌ها</h1>
           </div>
           <Link
             href="/dashboard/orders"
