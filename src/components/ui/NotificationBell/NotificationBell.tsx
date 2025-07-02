@@ -42,7 +42,7 @@ export default function NotificationBell() {
       </button>
 
       {open && (
-        <div className="absolute left-0 mt-3 w-72 max-h-72 overflow-y-auto bg-white border border-zinc-100 rounded-lg shadow-lg z-50">
+        <div className="absolute left-0 mt-3 top-3 w-72 max-h-72 overflow-y-auto bg-white border border-zinc-100 rounded-lg shadow-lg z-50">
           <div className="p-3 border-b border-zinc-400 font-semibold text-zinc-700">
             اعلان‌ها
           </div>

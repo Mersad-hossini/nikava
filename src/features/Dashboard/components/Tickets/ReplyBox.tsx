@@ -1,8 +1,12 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 
-export default function ReplyBox({ onSend }) {
+type ReplyBoxProps = {
+  onSend: (message: string) => void;
+};
+
+export default function ReplyBox({ onSend }: ReplyBoxProps) {
   const [message, setMessage] = useState("");
 
   return (

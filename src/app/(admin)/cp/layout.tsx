@@ -1,3 +1,4 @@
+import AdminBottomNav from "@/features/Admin/AdminBottomNav/MobileBottomNav";
 import AdminSidebar from "@/features/Admin/AdminSidebar/AdminSidebar";
 import AdminTopbar from "@/features/Admin/AdminTopbar/AdminTopbar";
 
@@ -9,6 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <AdminTopbar />
         <main className="p-4">{children}</main>
       </div>
+      <AdminBottomNav />
     </div>
   );
 }

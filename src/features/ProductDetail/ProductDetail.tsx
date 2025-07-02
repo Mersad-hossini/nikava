@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { Star, Plus, Heart } from "lucide-react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
 import { Thumbs } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/thumbs";
@@ -13,7 +14,7 @@ import ProductCarousel from "./components/ProductCard";
 import SocialShare from "./components/socialIcons";
 
 export default function ProductDetail() {
-  const [thumbsSwiper, setThumbsSwiper] = useState<null>(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   const images = [
     "/images/AirBuds.webp",

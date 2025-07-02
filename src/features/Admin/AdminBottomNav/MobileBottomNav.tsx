@@ -1,30 +1,18 @@
+import { Plus, Settings, LogOut } from "lucide-react";
 import NotificationBell from "@/components/ui/NotificationBell/NotificationBell";
-import { Settings, LogOut, Plus } from "lucide-react";
 
-export default function AdminTopbar() {
-  const greeting = () => {
-    const hour = new Date().getHours();
-    if (hour < 12) return "صبح بخیر";
-    if (hour < 18) return "ظهر بخیر";
-    return "عصر بخیر";
-  };
-
+const AdminBottomNav = () => {
   return (
-    <header className="mx-4 mt-4 mb-6 bg-white rounded-xl shadow-md border border-zinc-200 px-12 py-4 grid grid-cols-1 xs:grid-cols-2">
-      <div className="text-base font-semibold text-center xs:text-start text-zinc-800">
-        <span>{greeting()}، </span>
-        <span className="text-blue-600"> رضا منصوری </span>
-      </div>
-
-      <div className="hidden xs:flex items-center justify-end gap-4">
-        <div className="dropdown dropdown-end">
+    <div className="xs:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow z-40">
+      <div className="flex justify-around items-center px-4 py-2 text-xs text-zinc-600">
+        {/* افزودن */}
+        <div className="dropdown dropdown-top dropdown-end">
           <label tabIndex={0} className="cursor-pointer">
             <Plus size={20} className="text-green-600 hover:text-green-700" />
           </label>
-
           <ul
             tabIndex={0}
-            className="menu dropdown-content z-[50] mt-3 p-2 shadow bg-white border border-gray-200 rounded-box w-56"
+            className="menu dropdown-content right-0 z-[60] mb-3 p-2 shadow bg-white border border-gray-200 rounded-box w-max min-w-[180px]"
           >
             <li>
               <a href="/admin/products/new">➕ افزودن محصول ساده</a>
@@ -38,16 +26,14 @@ export default function AdminTopbar() {
           </ul>
         </div>
 
-        <NotificationBell />
-
-        <div className="dropdown dropdown-end">
+        {/* تنظیمات */}
+        <div className="dropdown dropdown-top dropdown-end">
           <label tabIndex={0} className="cursor-pointer">
-            <Settings size={20} />
+            <Settings size={20} className="text-zinc-700 hover:text-black" />
           </label>
-
           <ul
             tabIndex={0}
-            className="menu dropdown-content z-[50] mt-3 p-2 shadow bg-white border border-gray-200 rounded-box w-56"
+            className="menu dropdown-content right-0 z-[60] mb-3 p-2 shadow bg-white border border-gray-200 rounded-box w-max min-w-[180px]"
           >
             <li>
               <a href="/admin/blogs" className="flex items-center gap-2">
@@ -77,10 +63,16 @@ export default function AdminTopbar() {
           </ul>
         </div>
 
+        {/* نوتیفیکیشن */}
+        <NotificationBell />
+
+        {/* خروج */}
         <button title="خروج">
           <LogOut size={20} className="text-red-500 hover:text-red-600" />
         </button>
       </div>
-    </header>
+    </div>
   );
-}
+};
+
+export default AdminBottomNav;

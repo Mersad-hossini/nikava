@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function CheckoutSuccess() {
+function CheckoutSuccess() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-green-50 px-4 py-10">
       <div className="bg-white border border-green-200 rounded-2xl shadow p-6 w-full max-w-lg text-center space-y-4">

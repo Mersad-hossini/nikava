@@ -1,12 +1,12 @@
 "use client";
 
-import EmojiPicker, { EmojiClickData } from "emoji-picker-react";
+import EmojiPicker, { EmojiClickData, Theme } from "emoji-picker-react";
 import { Smile } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 interface ChatInputProps {
   message: string;
-  setMessage: (val: string) => void;
+  setMessage: React.Dispatch<React.SetStateAction<string>>;
   onSend: () => void;
 }
 
@@ -65,7 +65,7 @@ export default function ChatInput({
           <div className="absolute bottom-full right-0 mb-2 z-50">
             <EmojiPicker
               onEmojiClick={handleEmojiClick}
-              theme="dark"
+              theme={Theme.DARK}
               autoFocusSearch={false}
               width={300}
               height={430}

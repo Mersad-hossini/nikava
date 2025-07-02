@@ -5,7 +5,7 @@ import { Menu, LogOut } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 import SidebarItem from "./SidebarItem";
-import Profile from "./Profile";
+import AdminProfile from "./AdminProfile";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -62,7 +62,7 @@ export default function AdminSidebar() {
           />
         </Link>
 
-        <Profile setIsOpen={() => {}} />
+        <AdminProfile setIsOpen={() => {}} />
         <SidebarItem pathname={pathname} setIsOpen={() => {}} />
         <button className="w-full mt-4 flex items-center justify-center gap-2 cursor-pointer text-white bg-zinc-700 hover:bg-zinc-800 transition-all rounded-md py-2">
           <LogOut size={16} />
@@ -88,7 +88,7 @@ export default function AdminSidebar() {
           />
         </Link>
 
-        <Profile setIsOpen={setIsOpen} />
+        <AdminProfile setIsOpen={setIsOpen} />
         <SidebarItem pathname={pathname} setIsOpen={setIsOpen} />
         <button className="w-full mt-4 flex items-center justify-center gap-2 cursor-pointer text-white bg-zinc-700 hover:bg-zinc-800 transition-all rounded-md py-2">
           <LogOut size={16} />
