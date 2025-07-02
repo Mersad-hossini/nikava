@@ -51,8 +51,7 @@
 }
 
 body {
-  font-family: IranSans;
-  font-family: IranSansNum;
+  font-family: "IranSansNum", "IranSans";
 }
 
 @theme {
