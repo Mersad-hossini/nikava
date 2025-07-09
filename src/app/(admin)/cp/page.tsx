@@ -1,8 +1,8 @@
-import Admin from "@/features/Admin/Admin";
+import AdminDashboard from "@/features/Admin/AdminDashboard";
 import React from "react";
 
 function AdminPage() {
-  return <Admin />;
+  return <AdminDashboard />;
 }
 
 export default AdminPage;

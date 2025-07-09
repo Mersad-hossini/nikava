@@ -14,7 +14,7 @@ export default function ErrorPage({}: { error: Error; reset: () => void }) {
       </div>
 
       <h1 className="text-2xl md:text-3xl font-bold text-zinc-800 mb-2">
-        خطای داخلی سرور
+        خطای سمت سرور
       </h1>
       <p className="text-sm md:text-base text-zinc-500 mb-6">
         متأسفیم! مشکلی در پردازش درخواست شما به وجود آمده است.

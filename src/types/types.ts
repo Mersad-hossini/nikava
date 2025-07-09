@@ -12,3 +12,13 @@ export interface ProductType {
   price: string;
   image: string;
 }
+
+// auth.ts
+export type UserRole = "user" | "admin" | "guest";
+
+export interface AuthUser {
+  id: number;
+  phone: string;
+  role: UserRole;
+  token: string;
+}
