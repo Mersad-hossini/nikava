@@ -12,14 +12,13 @@ const orderStatusData = [
 
 const COLORS = ["#facc15", "#4ade80", "#f87171", "#60a5fa"];
 
-// چارت
 function OrderStatusPieChart() {
   return (
     <div className="bg-zinc-100 rounded-xl border border-zinc-100 shadow-md p-2">
       <h2 className="text-xl font-semibold text-gray-800 mb-4">
         وضعیت سفارش‌ها
       </h2>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={350}>
         <PieChart>
           <Pie
             data={orderStatusData}

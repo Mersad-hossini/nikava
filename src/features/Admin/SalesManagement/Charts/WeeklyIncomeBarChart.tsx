@@ -25,9 +25,9 @@ const baseColor = "#10b981"; // emerald-500
 
 function WeeklyIncomeBarChart() {
   return (
-    <div className="bg-zinc-100 rounded-xl border border-zinc-100 shadow-md p-4">
+    <div className="bg-zinc-100 rounded-xl border border-zinc-100 shadow-md p-2">
       <h2 className="text-xl font-semibold text-gray-800 mb-4">درآمد هفتگی</h2>
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={350}>
         <BarChart data={weeklyIncome}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis

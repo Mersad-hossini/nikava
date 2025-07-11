@@ -1,5 +1,6 @@
 import NotificationBell from "@/components/ui/NotificationBell/NotificationBell";
 import { Settings, LogOut, Plus } from "lucide-react";
+import Link from "next/link";
 
 export default function AdminTopbar() {
   const greeting = () => {
@@ -27,13 +28,12 @@ export default function AdminTopbar() {
             className="menu dropdown-content z-[50] mt-3 p-2 shadow bg-white border border-gray-200 rounded-box w-56"
           >
             <li>
-              <a href="/admin/products/new">➕ افزودن محصول ساده</a>
+              <Link href="/cp/products/new">➕ افزودن محصول</Link>
             </li>
             <li>
-              <a href="/admin/products/new?type=variable">🧩 محصول متغیر</a>
-            </li>
-            <li>
-              <a href="/admin/products/import">📥 افزودن از فایل اکسل</a>
+              <Link href="/cp/discounts/new">
+                🎟️ افزودن کد تخفیف
+              </Link>
             </li>
           </ul>
         </div>
@@ -50,29 +50,32 @@ export default function AdminTopbar() {
             className="menu dropdown-content z-[50] mt-3 p-2 shadow bg-white border border-gray-200 rounded-box w-56"
           >
             <li>
-              <a href="/admin/blogs" className="flex items-center gap-2">
+              <Link href="/cp/blogs" className="flex items-center gap-2">
                 <span>📝</span> <span>وبلاگ</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/admin/banners" className="flex items-center gap-2">
+              <Link href="/cp/banners" className="flex items-center gap-2">
                 <span>🖼️</span> <span>بنرها</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/admin/newsletter" className="flex items-center gap-2">
+              <Link
+                href="/cp/newsletter"
+                className="flex items-center gap-2"
+              >
                 <span>📬</span> <span>خبرنامه</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/admin/settings" className="flex items-center gap-2">
+              <Link href="/cp/settings" className="flex items-center gap-2">
                 <span>⚙️</span> <span>تنظیمات سایت</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/admin/profile" className="flex items-center gap-2">
+              <Link href="/cp/profile" className="flex items-center gap-2">
                 <span>👤</span> <span>پروفایل ادمین</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,9 +1,10 @@
 import React from "react";
-import DashboardCard from "../Dashboard/components/Dashboard/DashboardCard";
+import DashboardCard from "../../Dashboard/components/Dashboard/DashboardCard";
 import { ShoppingCart, DollarSign, Users, Package } from "lucide-react";
 import MonthlySalesChart from "./Charts/MonthlySalesChart";
 import OrderStatusPieChart from "./Charts/OrderStatusPieChart";
 import WeeklyIncomeBarChart from "./Charts/WeeklyIncomeBarChart";
+import TopCategoriesRadarChart from "./Charts/TopCategoriesRadarChart";
 
 function AdminDashboard() {
   return (
@@ -35,7 +36,7 @@ function AdminDashboard() {
           value="۳۱۵ محصول"
         />
       </div>
-      
+
       {/* بخش نمودارها */}
       <div className="mt-8 space-y-6">
         {/* نمودار اول: فروش ماهانه تمام عرض */}
@@ -43,13 +44,16 @@ function AdminDashboard() {
           <MonthlySalesChart />
         </div>
 
-        {/* نمودار دوم و سوم کنار هم در دسکتاپ */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* نمودار دوم، سوم و چهارم در گرید ۳تایی در دسکتاپ */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
           <div className="bg-white p-4 rounded-xl shadow-lg">
             <WeeklyIncomeBarChart />
           </div>
           <div className="bg-white p-4 rounded-xl shadow-lg">
             <OrderStatusPieChart />
+          </div>
+          <div className="bg-white p-4 rounded-xl shadow-lg">
+            <TopCategoriesRadarChart />
           </div>
         </div>
       </div>
