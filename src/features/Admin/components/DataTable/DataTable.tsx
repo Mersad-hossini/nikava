@@ -9,13 +9,19 @@ import getNestedValue from "@/utils/getNestedValue";
 
 const itemsPerPage = 8;
 
-export default function DataTable<T extends { id: number | string }>({
-  datas,
-  columns,
-  onEdit,
-  onDelete,
-  onView
-}: DataTableProps<T>) {
+export default function DataTable<T extends { id: number | string }>(
+  {
+    datas,
+    columns,
+    onEdit,
+    onDelete,
+    onView,
+    onBan,
+    onRoleChange,
+    onApprove,
+    onReply,
+  }: DataTableProps<T> // ✅ درستش اینه
+) {
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -55,18 +61,29 @@ export default function DataTable<T extends { id: number | string }>({
             {columns.map((col) => (
               <th key={col.dataIndex}>{col.title}</th>
             ))}
-            {(onEdit || onDelete || onView) && <th className="text-center">عملیات</th>}
+            {(onEdit ||
+              onDelete ||
+              onView ||
+              onBan ||
+              onRoleChange ||
+              onApprove ||
+              onReply 
+              ) && <th className="text-center">عملیات</th>}
           </tr>
         </thead>
         <tbody>
           {currentItems.map((row) => (
-            <DataRow
+            <DataRow<T>
               key={row.id}
               row={row}
               columns={columns}
               onEdit={onEdit}
               onDelete={onDelete}
               onView={onView}
+              onBan={onBan}
+              onRoleChange={onRoleChange}
+              onApprove={onApprove}
+              onReply={onReply}
             />
           ))}
         </tbody>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import DataTable from "./DataTable/DataTable";
-import { Column, OrderProps } from "./types/Table.type";
+import DataTable from "../components/DataTable/DataTable";
+import { Column, OrderProps } from "../components/types/Table.type";
 import { useRouter } from "next/navigation";
 
 const orders: OrderProps[] = [

@@ -12,7 +12,6 @@ import {
   Headphones,
   NotebookPenIcon,
   ListTree,
-  Indent,
 } from "lucide-react";
 
 const SidebarLinks = [
@@ -60,12 +59,7 @@ const SidebarLinks = [
       {
         href: "/cp/categories",
         label: "دسته‌بندی‌ها",
-        icon: <ListTree size={18} />, 
-      },
-      {
-        href: "/cp/subcategories",
-        label: "زیر‌دسته‌بندی‌ها",
-        icon: <Indent size={18} />, 
+        icon: <ListTree size={18} />,
       },
     ],
   },

@@ -76,6 +76,12 @@ body {
   justify-content: center !important;
 }
 
-.recharts-surface:focus, .recharts-sector {
+.recharts-surface:focus,
+.recharts-sector {
   outline: none !important;
+}
+
+.tooltip:before {
+  font-size: 12px !important;
+  padding: 2px 4px !important;
 }

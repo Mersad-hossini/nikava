@@ -91,6 +91,12 @@ function NewDiscounts() {
           ]}
         />
 
+        <FormInput
+          as="input"
+          type="file"
+          name="isActive"
+          label="بنر تخفیفات"
+        />
         {/* فعال بودن */}
         <FormInput
           as="input"

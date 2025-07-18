@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import DataTable from "./DataTable/DataTable";
+import DataTable from "../components/DataTable/DataTable";
 import { Plus } from "lucide-react";
-import { Column } from "./types/Table.type";
-import { ProductProps } from "./types/Table.type";
+import { Column } from "../components/types/Table.type";
+import { ProductProps } from "../components/types/Table.type";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 

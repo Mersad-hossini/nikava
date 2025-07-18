@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import DataTable from "./DataTable/DataTable";
-import { Column, DiscountProps } from "./types/Table.type";
+import DataTable from "../components/DataTable/DataTable";
+import { Column, DiscountProps } from "../components/types/Table.type";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Plus } from "lucide-react";

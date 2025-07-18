@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { OrderProps } from "./types/Table.type";
+import { OrderProps } from "../components/types/Table.type";
 
 // داده‌ی فرضی
 const dummyOrder: OrderProps = {
