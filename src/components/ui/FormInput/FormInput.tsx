@@ -13,6 +13,7 @@ export default function FormInput({
   dir,
   options,
   accept,
+  multiple
 }: FormInputProps) {
   return (
     <div className="flex flex-col gap-2 w-full">
@@ -69,8 +70,8 @@ export default function FormInput({
         <input
           name={name}
           type="file"
-          multiple
           accept={accept}
+          multiple={multiple} // ← کنترل اینکه چند فایل باشد یا نه
           className="w-full border border-gray-200 rounded-xl p-2 text-sm bg-gray-100 outline-0"
           onChange={onChange}
           disabled={disabled}

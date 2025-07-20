@@ -31,7 +31,7 @@ export default function AdminTopbar() {
               <Link href="/cp/products/new">➕ افزودن محصول</Link>
             </li>
             <li>
-              <Link href="/cp/story/new">➕ ایجاد استوری</Link>
+              <Link href="/cp/story">➕ ایجاد استوری</Link>
             </li>
             <li>
               <Link href="/cp/discounts/new">

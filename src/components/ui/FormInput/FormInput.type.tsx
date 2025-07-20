@@ -20,4 +20,5 @@ export type FormInputProps = {
   dir?: "rtl" | "ltr";
   options?: Option[]; // فقط برای select
   accept?: string; // فقط برای فایل
+  multiple?: boolean | undefined
 };

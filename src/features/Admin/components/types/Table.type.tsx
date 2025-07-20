@@ -155,3 +155,24 @@ export interface BlogProps {
   createdAt: string;
   isPublished: boolean;
 }
+
+// Story
+// تایپ پایه برای داده استوری
+export type StoryType = {
+  id: number;
+  title: string;
+  cover: string;
+};
+
+// فقط برای کارت استوری
+export type StoryCardProps = {
+  story: StoryType;
+  onEdit: () => void;
+  onDelete: () => void;
+};
+
+// فقط برای مودال استوری
+export type StoryModalProps = {
+  story: StoryType | null;
+  onClose: () => void;
+};
