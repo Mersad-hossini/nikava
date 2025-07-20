@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { CalendarDays, X } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
@@ -13,8 +13,8 @@ function Profile({ setIsOpen }: ProfileProps) {
     const now = new Date();
     const formatter = new Intl.DateTimeFormat("fa-IR", {
       weekday: "long",
-      day: "numeric", 
-      month: "long", 
+      day: "numeric",
+      month: "long",
     });
     setToday(formatter.format(now));
   }, []);
@@ -23,15 +23,18 @@ function Profile({ setIsOpen }: ProfileProps) {
     <div className="flex items-center justify-between mb-6">
       <div className="flex items-center gap-3">
         <Image
-          src="/images/user.png"
+          src="/images/mersad.jpg"
           width={48}
           height={48}
           alt="user avatar"
           className=" border border-zinc-400 rounded-full"
         />
         <div className="flex flex-col">
-          <span className="font-semibold text-sm">مرصاد محمد حسینی</span>
-          <span className="text-xs text-zinc-600">{today}</span>
+          <span className="text-sm text-zinc-600">رضا منصوری</span>
+          <span className="text-xs text-zinc-400 flex items-center gap-1 mt-1">
+            <CalendarDays size={12} className="text-zinc-400" />
+            {today}
+          </span>
         </div>
       </div>
 

@@ -85,3 +85,16 @@ body {
   font-size: 12px !important;
   padding: 2px 4px !important;
 }
+
+.tiptap,
+.ProseMirror,
+.ProseMirror-focused {
+  outline: none;
+}
+
+.editor-content img {
+  max-width: 20%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}

@@ -12,6 +12,7 @@ import {
   Headphones,
   NotebookPenIcon,
   ListTree,
+  ImagePlus,
 } from "lucide-react";
 
 const SidebarLinks = [
@@ -61,12 +62,17 @@ const SidebarLinks = [
         label: "دسته‌بندی‌ها",
         icon: <ListTree size={18} />,
       },
+      {
+        href: "/cp/story",
+        label: "ایجاد استوری",
+        icon: <ImagePlus size={18} />,
+      },
     ],
   },
   {
     title: "محتوا و تنظیمات",
     items: [
-      { href: "/cp/blog", label: "وبلاگ", icon: <FileText size={18} /> },
+      { href: "/cp/blogs", label: "وبلاگ", icon: <FileText size={18} /> },
       { href: "/cp/banners", label: "بنرها", icon: <Megaphone size={18} /> },
       {
         href: "/cp/khabar",

@@ -115,3 +115,43 @@ export type CategoryProps = {
   productCount?: number;
   parentId?: number | null;
 };
+
+// Banner
+export type BannerProps = {
+  id: number;
+  title: string;
+  imageUrl: string;
+  link: string;
+  position: "homepage" | "category" | "offer" | "sidebar";
+  isActive: boolean;
+  order: number;
+  startDate?: string;
+  endDate?: string;
+};
+
+// Newsletter
+export type NewsletterSubscriber = {
+  id: number;
+  email: string;
+  createdAt: string;
+  status: "active" | "unsubscribed"; // یا مثلاً "blocked"
+};
+
+// Notification
+export type Notification = {
+  id: number;
+  title: string;
+  description?: string;
+  isRead: boolean;
+  createdAt: string;
+};
+
+// Blog
+export interface BlogProps {
+  id: number;
+  title: string;
+  cover: string;
+  author: string;
+  createdAt: string;
+  isPublished: boolean;
+}
