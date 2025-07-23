@@ -27,7 +27,7 @@ function Profile({ setIsOpen }: ProfileProps) {
           width={48}
           height={48}
           alt="user avatar"
-          className=" border border-zinc-400 rounded-full"
+          className=" border size-13 border-zinc-400 rounded-full"
         />
         <div className="flex flex-col">
           <span className="text-sm text-zinc-600">رضا منصوری</span>

@@ -24,11 +24,11 @@ export default function AdminProfile({ setIsOpen }: ProfileProps) {
       {/* ✅ اطلاعات ادمین */}
       <div className="flex items-center gap-3">
         <Image
-          src="/images/reza.jpg"
+          src="/images/mersad.jpg"
           width={52}
           height={52}
           alt="Admin Avatar"
-          className="rounded-full border border-gray-300 shadow-sm"
+          className="rounded-full border size-13 border-gray-300 shadow-sm"
         />
 
         <div className="flex flex-col">
