@@ -7,7 +7,6 @@ import { Autoplay, Navigation } from "swiper/modules";
 
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import TitleSection from "@/components/ui/TitleSection";
 
 // Api
@@ -69,17 +68,15 @@ export default function BrandCarousel() {
               key={brand.id}
               className="flex justify-center py-3 select-none"
             >
-              <Link href="#">
-                <div className="size-20 lg:size-25 rounded-full overflow-hidden shadow transition-transform hover:scale-105 mx-auto">
-                  <Image
-                    src={brand.image}
-                    alt={brand.name}
-                    width={112}
-                    height={112}
-                    className="w-full h-full object-none"
-                  />
-                </div>
-              </Link>
+              <div className="size-20 lg:size-25 rounded-full overflow-hidden shadow transition-transform hover:scale-105 mx-auto">
+                <Image
+                  src={brand.image}
+                  alt={brand.name}
+                  width={112}
+                  height={112}
+                  className="w-full h-full object-none"
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

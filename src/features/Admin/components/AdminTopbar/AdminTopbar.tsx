@@ -64,19 +64,19 @@ export default function AdminTopbar() {
             </li>
             <li>
               <Link
-                href="/cp/newsletter"
+                href="/cp/khabar"
                 className="flex items-center gap-2"
               >
                 <span>📬</span> <span>خبرنامه</span>
               </Link>
             </li>
             <li>
-              <Link href="/cp/settings" className="flex items-center gap-2">
-                <span>⚙️</span> <span>تنظیمات سایت</span>
+              <Link href="/cp/tickets" className="flex items-center gap-2">
+                <span>⚙️</span> <span>تیکت ها</span>
               </Link>
             </li>
             <li>
-              <Link href="/cp/profile" className="flex items-center gap-2">
+              <Link href="/cp/admin" className="flex items-center gap-2">
                 <span>👤</span> <span>پروفایل ادمین</span>
               </Link>
             </li>

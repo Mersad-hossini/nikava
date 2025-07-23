@@ -24,7 +24,7 @@ function Auth() {
 
           <div className="text-center mt-6 text-sm text-gray-600">
             <span>ورود | ثبت نام شما به معنای پذیرش </span>
-            <Link href="#" className="text-blue-600 hover:underline">
+            <Link href="/about-us#rules" className="text-blue-600 hover:underline">
               قوانین و مقررات
             </Link>
             <span> نیکاوا است.</span>

@@ -5,7 +5,7 @@ import React from "react";
 function SingleBanner() {
   return (
     <div className="rounded-2xl px-5 mt-3 sm:px-15 select-none mb-10">
-      <Link href="#">
+      <Link href="/nikava-offers">
         <Image
           src="/images/singleBanner.webp"
           alt=""

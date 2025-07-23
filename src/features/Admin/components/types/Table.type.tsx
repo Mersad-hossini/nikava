@@ -116,6 +116,14 @@ export type CategoryProps = {
   parentId?: number | null;
 };
 
+// Chat
+export type ChatProps = {
+  users: { id: number; name: string }[];
+  selectedUserId: number | null;
+  onSelectUser: (id: number) => void;
+  children: React.ReactNode;
+};
+
 // Banner
 export type BannerProps = {
   id: number;

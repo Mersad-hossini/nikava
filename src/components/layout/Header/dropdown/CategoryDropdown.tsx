@@ -207,7 +207,6 @@ const CategoryDropdown = () => {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");
       console.log();
-      
     } else {
       document.body.classList.remove("overflow-hidden");
     }
@@ -240,7 +239,7 @@ const CategoryDropdown = () => {
       {isOpen && (
         <div className="absolute right-0 top-full flex bg-white border border-gray-200 shadow-2xl rounded-lg z-50 text-right max-h-[80vh] w-full sm:w-auto">
           {/* منوی اول */}
-          <ul className="w-60 max-h-[480px] overflow-y-auto text-sm text-gray-800 divide-y divide-gray-100">
+          <ul className="w-60 max-h-[480px] overflow-y-auto text-sm rounded-lg text-gray-800 divide-y divide-gray-100">
             {categories.map((cat) => (
               <li
                 key={cat.name}
@@ -257,7 +256,7 @@ const CategoryDropdown = () => {
 
           {/* منوی دوم */}
           <div className="w-64 max-h-[80vh] overflow-y-auto border-r rounded-lg border-gray-100 bg-gray-50">
-            <ul className="text-xs max-h-[480px] text-gray-700 py-3 px-4 space-y-1">
+            <ul className="text-xs max-h-[480px] text-gray-700 rounded-lg py-3 px-4 space-y-1">
               {categories
                 .find((cat) => cat.name === hovered)
                 ?.children.map((sub, idx) => (

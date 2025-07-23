@@ -17,7 +17,7 @@ export default function ProductCarousel() {
           </h2>
 
           <Link
-            href="/products"
+            href="/category/products"
             className="flex items-center gap-1 text-xs sm:text-sm  text-red-600"
           >
             مشاهده همه

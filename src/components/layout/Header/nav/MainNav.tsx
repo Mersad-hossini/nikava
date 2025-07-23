@@ -112,8 +112,7 @@ function MainNav() {
                       </Link>
                     </li>
 
-                    <li>
-                      <Link href="/profile/orders">
+                    <li className="cursor-pointer">
                         <div className="flex items-center text-zinc-600 text-sm font-bold hover:bg-gray-100 p-2 rounded-lg">
                           <LogOut className="ml-2" />
                           <div className="flex items-center justify-between w-full">
@@ -121,7 +120,6 @@ function MainNav() {
                             <ChevronLeft />
                           </div>
                         </div>
-                      </Link>
                     </li>
                   </ul>
                 </div>

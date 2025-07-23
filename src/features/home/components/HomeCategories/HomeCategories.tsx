@@ -15,7 +15,7 @@ function HomeCategories() {
       <CategoriesItem img={"/images/banner_Categoriey4.png"} title="قهوه ساز" />
       <CategoriesItem img={"/images/banner_Categoriey5.png"} title="لباسشویی" />
       <Link
-        href="#"
+        href="/category/all"
         className="hidden mid-md:flex justify-center items-center bg-neutral-100 rounded-full  text-neutral-400 p-4"
       >
         <span className="text-2xl">

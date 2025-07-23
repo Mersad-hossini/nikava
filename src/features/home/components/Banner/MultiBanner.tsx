@@ -5,7 +5,7 @@ import React from "react";
 function MultiBanner() {
   return (
     <div className="rounded-2xl overflow-hidden select-none">
-      <Link href="#">
+      <Link href="/category/watch">
         <Image
           src={"/images/multiBanner.webp"}
           alt=""
