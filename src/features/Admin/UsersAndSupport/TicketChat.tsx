@@ -2,29 +2,16 @@
 
 import { useState } from "react";
 import ChatLayout from "./Chat/ChatLayout";
-import ChatWindow from "./Chat/ChatWindow";
+import ChatWindow, { Message } from "./Chat/ChatWindow";
 
 const users = [
   { id: 1, name: "مرصاد محمد حسینی" },
   { id: 2, name: "علی رستمی" },
 ];
 
-const messages = {
-  1: [
-    { message: "سلام، مشکلی دارم.", sender: "user", timestamp: "۱۴۰۳/۰۴/۲۱" },
-    {
-      message: "سلام، بررسی می‌کنم.",
-      sender: "support",
-      timestamp: "۱۴۰۳/۰۴/۲۱",
-    },
-  ],
-  2: [
-    {
-      message: "چرا سفارش من ارسال نشده؟",
-      sender: "user",
-      timestamp: "۱۴۰۳/۰۴/۲۰",
-    },
-  ],
+const messages: Record<number, Message[]> = {
+  1: [{ message: "سلام", sender: "user", timestamp: "۱۴۰۳/۰۴/۲۱" }],
+  2: [{ message: "سفارش من چی شد؟", sender: "user", timestamp: "۱۴۰۳/۰۴/۲۰" }],
 };
 
 export default function TicketChat() {
@@ -33,11 +20,12 @@ export default function TicketChat() {
 
   const handleSend = (text: string) => {
     if (!selectedUserId) return;
-    const newMsg = {
+    const newMsg: Message = {
       message: text,
       sender: "support",
       timestamp: new Date().toLocaleTimeString("fa-IR"),
     };
+
     setAllMessages((prev) => ({
       ...prev,
       [selectedUserId]: [...(prev[selectedUserId] || []), newMsg],
