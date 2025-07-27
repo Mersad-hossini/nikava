@@ -6,14 +6,21 @@ import { Autoplay, FreeMode, Navigation } from "swiper/modules";
 import { ChevronRight, ChevronLeft, Ellipsis } from "lucide-react";
 import ProductCard from "@/components/ui/ProductCard/ProductCard";
 import Link from "next/link";
+import { ProductProps } from "@/types/types";
 
-export default function ProductCarousel() {
+export default function ProductCarousel({
+  products,
+  title,
+}: {
+  products: ProductProps[];
+  title: string;
+}) {
   return (
     <section className="w-full bg-zinc-100 py-10 mb-10">
       <div className="relative mx-auto px-15">
         <div className="flex flex-wrap gap-y-2 items-center justify-between mb-6">
           <h2 className="text-sm sm:text-lg font-semibold text-zinc-800">
-            پیشنهادهای شگفت‌انگیز
+            {title}
           </h2>
 
           <Link
@@ -57,9 +64,9 @@ export default function ProductCarousel() {
             1280: { slidesPerView: 5 },
           }}
         >
-          {[...Array(8)].map((_, index) => (
-            <SwiperSlide key={index}>
-              <ProductCard />
+          {products?.map((product) => (
+            <SwiperSlide key={product.id}>
+              <ProductCard {...product} />
             </SwiperSlide>
           ))}
         </Swiper>

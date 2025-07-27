@@ -19,8 +19,6 @@ export const metadata = {
     "تضمین اصالت",
   ],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   openGraph: {
     title: "نیکاوا | تجربه لذت‌بخش خرید آنلاین",
     description:
@@ -39,6 +37,14 @@ export const metadata = {
   },
 };
 
+// موارد جداگانه بر اساس API جدید Next.js 15
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+export const themeColor = "#ffffff";
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -46,7 +52,7 @@ export default function RootLayout({
     <html lang="fa" dir="rtl" data-theme="light">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" href="/images/Nikava.png" /> 
+        <link rel="icon" type="image/png" href="/images/Nikava.png" />
       </head>
       <body>
         <Providers>{children}</Providers>

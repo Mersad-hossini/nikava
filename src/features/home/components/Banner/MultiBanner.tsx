@@ -1,19 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
-function MultiBanner() {
+function MultiBanner({ banner }: { banner: string }) {
   return (
     <div className="rounded-2xl overflow-hidden select-none">
-      <Link href="/category/watch">
-        <Image
-          src={"/images/multiBanner.webp"}
-          alt=""
-          width={720}
-          height={256}
-          className="rounded-2xl w-full h-auto object-cover"
-        />
-      </Link>
+      <Image
+        src={banner}
+        alt=""
+        width={720}
+        height={256}
+        className="rounded-2xl w-full h-auto object-cover"
+      />
     </div>
   );
 }

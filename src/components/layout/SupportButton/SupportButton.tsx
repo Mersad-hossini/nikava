@@ -82,7 +82,7 @@ export default function ChatWidget() {
         {/* Chat modal */}
         <div
           ref={modalRef}
-          className={`transition-all duration-300 ease-in-out absolute right-0 w-80 max-h-[calc(100vh-4rem)] h-[36rem] rounded-2xl shadow-2xl overflow-hidden 
+          className={`transition-all duration-300 chat-box ease-in-out absolute right-0 w-80 max-h-[calc(100vh-4rem)] h-[36rem] rounded-2xl shadow-2xl overflow-hidden 
           ${
             isModalOpen
               ? "bottom-14 opacity-100 scale-100"

@@ -22,3 +22,13 @@ export interface AuthUser {
   role: UserRole;
   token: string;
 }
+
+export interface ProductProps {
+  id: string;
+  title: string;
+  price: number;
+  discountedPrice: number;
+  discountPercent: number;
+  rating: number;
+  image: string;
+}

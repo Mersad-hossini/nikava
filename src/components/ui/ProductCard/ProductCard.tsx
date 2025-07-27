@@ -1,24 +1,34 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { MoreHorizontal } from "lucide-react";
 import { ProductTimerBadge } from "./ProductTimerBadge";
 import { ThreeDotMenu } from "./ThreeDotMenu";
-import Link from "next/link";
+import { ProductProps } from "@/types/types";
 
-export default function ProductCard() {
+
+export default function ProductCard({
+  title,
+  price,
+  discountedPrice,
+  discountPercent,
+  rating,
+  image,
+}: ProductProps) {
   const [showMenu, setShowMenu] = useState(false);
   const [timeLeft, setTimeLeft] = useState("00:00:00");
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // ⏱ Timer
+  // ⏱ Timer logic
   useEffect(() => {
     const end = new Date().getTime() + 3600 * 1000;
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const diff = end - now;
       if (diff <= 0) return clearInterval(interval);
+
       const h = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(
         2,
         "0"
@@ -30,7 +40,7 @@ export default function ProductCard() {
     return () => clearInterval(interval);
   }, []);
 
-  // Close menu
+  // Close menu if clicked outside
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (!menuRef.current?.contains(e.target as Node)) {
@@ -41,8 +51,12 @@ export default function ProductCard() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  const fullStars = Math.floor(rating);
+  const emptyStars = 5 - fullStars;
+
   return (
     <div className="relative bg-white rounded-3xl shadow border border-zinc-100 transition-all mb-3 p-4 w-full max-w-xs group">
+      {/* Three-dot menu */}
       <div className="absolute top-3 left-3 z-20" ref={menuRef}>
         <button
           onClick={() => setShowMenu(!showMenu)}
@@ -53,12 +67,12 @@ export default function ProductCard() {
         {showMenu && <ThreeDotMenu onClose={() => setShowMenu(false)} />}
       </div>
 
-      {/* Product Image */}
+      {/* Product image */}
       <div className="w-full aspect-[1/1] rounded-2xl overflow-hidden mb-3">
-        <Link href="/product/هندزفری-بلوتوثی-مدل-AirBuds-Pro-Max">
+        <Link href={`/product/${title}`}>
           <Image
-            src="/images/AirBuds.webp"
-            alt="محصول"
+            src={image}
+            alt={title}
             width={400}
             height={400}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
@@ -66,35 +80,45 @@ export default function ProductCard() {
         </Link>
       </div>
 
-      {/* Timer Discount */}
-      <ProductTimerBadge discount={25} time={timeLeft} />
+      {/* Discount timer badge */}
+      <ProductTimerBadge discount={discountPercent} time={timeLeft} />
 
-      {/* Product Infos */}
+      {/* Product info */}
       <div dir="rtl" className="space-y-1 text-right">
-        <h3 className="text-sm font-semibold text-zinc-800 leading-5">
-          هندزفری بلوتوثی مدل AirBuds Pro Max
+        <h3 className="text-sm font-semibold text-zinc-800 leading-5 line-clamp-2">
+          {title}
         </h3>
-        {/* Product Rating */}
+
+        {/* Rating */}
         <div className="flex items-center gap-1 my-2">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(fullStars)].map((_, i) => (
             <svg
-              key={i}
-              className={`w-4 h-4 ${
-                i < 4
-                  ? "fill-yellow-400 text-yellow-400"
-                  : "fill-gray-300 text-gray-300"
-              }`}
+              key={`full-${i}`}
+              className="w-4 h-4 fill-yellow-400 text-yellow-400"
               viewBox="0 0 24 24"
             >
               <path d="M12 .587l3.668 7.568L24 9.75l-6 5.85L19.336 24 12 19.897 4.664 24 6 15.6 0 9.75l8.332-1.595z" />
             </svg>
           ))}
-          <span className="text-xs text-zinc-500 mr-1">(۴.۵)</span>
+          {[...Array(emptyStars)].map((_, i) => (
+            <svg
+              key={`empty-${i}`}
+              className="w-4 h-4 fill-gray-300 text-gray-300"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 .587l3.668 7.568L24 9.75l-6 5.85L19.336 24 12 19.897 4.664 24 6 15.6 0 9.75l8.332-1.595z" />
+            </svg>
+          ))}
+          <span className="text-xs text-zinc-500 mr-1">({rating})</span>
         </div>
-        <div className="flex items-center justify-between mt-1">
-          <span className="text-xs line-through text-zinc-400">۱,۵۸۰,۰۰۰</span>
+
+        {/* Price */}
+        <div className="flex items-center font-IranSansNum justify-between mt-1">
+          <span className="text-xs line-through text-zinc-400">
+            {price.toLocaleString()} تومان
+          </span>
           <span className="text-red-600 font-bold text-sm">
-            ۱,۱۹۰,۰۰۰ تومان
+            {discountedPrice.toLocaleString()} تومان
           </span>
         </div>
       </div>

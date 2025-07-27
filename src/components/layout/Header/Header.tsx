@@ -47,12 +47,11 @@ function Header() {
             {/* Search Input */}
             <SearchInput />
             {/* Bell For Smaller Size(1030px) */}
-            <Link href="#">
+            
               {/* Badge number for bell */}
               <div className="hidden min-[330px]:flex lg:hidden relative bg-zinc-200 rounded-full p-2 mr-2">
                 <NotificationBell />
               </div>
-            </Link>
           </div>
 
           {/* Left Side Nav */}

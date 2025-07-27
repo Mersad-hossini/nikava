@@ -98,3 +98,15 @@ body {
   border-radius: 8px;
   object-fit: contain;
 }
+
+@media (max-height: 680px) {
+  .chat-box, .category-dropdown {
+    height: 30rem !important;
+  }
+}
+
+@media (max-height: 650px) {
+  .category-dropdown {
+    height: 25rem !important;
+  }
+}
