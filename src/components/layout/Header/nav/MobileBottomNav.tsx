@@ -42,7 +42,7 @@ const MobileBottomNav = () => {
             </div>
           </li>
           <li>
-            <Link href="#" className="flex flex-col items-center">
+            <Link href="/category/supermarket" className="flex flex-col items-center">
               <Store className="size-5" />
               <span>سوپرمارکت</span>
             </Link>

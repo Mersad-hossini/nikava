@@ -71,7 +71,7 @@ export default function FormInput({
           name={name}
           type="file"
           accept={accept}
-          multiple={multiple} // ← کنترل اینکه چند فایل باشد یا نه
+          multiple={multiple} 
           className="w-full border border-gray-200 rounded-xl p-2 text-sm bg-gray-100 outline-0"
           onChange={onChange}
           disabled={disabled}

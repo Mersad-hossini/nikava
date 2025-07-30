@@ -22,7 +22,6 @@ export default function Story() {
       <h1 className="text-xl font-bold mb-6">📸 مدیریت استوری‌ها</h1>
 
       <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 mid-md:grid-cols-4 gap-4">
-        {/* مربع افزودن استوری */}
         <div
           onClick={() => setModalStory("new")}
           className="h-50 w-full bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center cursor-pointer hover:opacity-90 transition"
@@ -30,7 +29,6 @@ export default function Story() {
           <Plus className="text-white size-10 font-bold" />
         </div>
 
-        {/* کارت‌های استوری */}
         {stories.map((story) => (
           <StoryCard
             key={story.id}
@@ -41,7 +39,6 @@ export default function Story() {
         ))}
       </div>
 
-      {/* مودال افزودن یا ویرایش */}
       {modalStory && (
         <StoryModal
           story={modalStory === "new" ? null : modalStory}

@@ -9,7 +9,6 @@ import TopCategoriesRadarChart from "./Charts/TopCategoriesRadarChart";
 function AdminDashboard() {
   return (
     <>
-      {/* کارت‌های آماری اصلی */}
       <div className="flex flex-wrap justify-evenly gap-4 px-4 py-6 bg-white rounded-xl shadow-lg">
         <DashboardCard
           icon={ShoppingCart}
@@ -37,14 +36,10 @@ function AdminDashboard() {
         />
       </div>
 
-      {/* بخش نمودارها */}
       <div className="mt-8 space-y-6">
-        {/* نمودار اول: فروش ماهانه تمام عرض */}
         <div className="bg-white p-4 rounded-xl shadow-lg">
           <MonthlySalesChart />
         </div>
-
-        {/* نمودار دوم، سوم و چهارم در گرید ۳تایی در دسکتاپ */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
           <div className="bg-white p-4 rounded-xl shadow-lg">
             <WeeklyIncomeBarChart />

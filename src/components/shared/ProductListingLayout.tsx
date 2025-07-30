@@ -1,5 +1,3 @@
-// components/shared/ProductListingLayout.tsx
-
 import React from "react";
 import { ProductType } from "@/types/types";
 import Breadcrumb from "../ui/Breadcrumb";

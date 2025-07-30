@@ -64,7 +64,7 @@ export default function ChatWidget() {
   };
 
   return (
-    <div className="fixed bottom-6 right-4 z-50 hidden sm:flex">
+    <div className="fixed bottom-13 lg:bottom-6 right-4 z-50 hidden md:flex">
       <div className="z-50">
         {/* Toggle button */}
         <div
@@ -85,7 +85,7 @@ export default function ChatWidget() {
           className={`transition-all duration-300 chat-box ease-in-out absolute right-0 w-80 max-h-[calc(100vh-4rem)] h-[36rem] rounded-2xl shadow-2xl overflow-hidden 
           ${
             isModalOpen
-              ? "bottom-14 opacity-100 scale-100"
+              ? "bottom-12 lg:bottom-14 opacity-100 scale-100"
               : "bottom-20 opacity-0 scale-95 pointer-events-none"
           }
         `}

@@ -8,7 +8,6 @@ import { ProductTimerBadge } from "./ProductTimerBadge";
 import { ThreeDotMenu } from "./ThreeDotMenu";
 import { ProductProps } from "@/types/types";
 
-
 export default function ProductCard({
   title,
   price,
@@ -55,7 +54,7 @@ export default function ProductCard({
   const emptyStars = 5 - fullStars;
 
   return (
-    <div className="relative bg-white rounded-3xl shadow border border-zinc-100 transition-all mb-3 p-4 w-full max-w-xs group">
+    <div className="relative bg-white rounded-3xl shadow border border-zinc-100 transition-all mb-3 p-4 w-full max-w-xs group flex flex-col justify-between h-full">
       {/* Three-dot menu */}
       <div className="absolute top-3 left-3 z-20" ref={menuRef}>
         <button
@@ -84,8 +83,8 @@ export default function ProductCard({
       <ProductTimerBadge discount={discountPercent} time={timeLeft} />
 
       {/* Product info */}
-      <div dir="rtl" className="space-y-1 text-right">
-        <h3 className="text-sm font-semibold text-zinc-800 leading-5 line-clamp-2">
+      <div dir="rtl" className="space-y-1 text-right mt-auto">
+        <h3 className="text-sm font-semibold text-zinc-800 leading-5 line-clamp-2 min-h-[2.5rem]">
           {title}
         </h3>
 
@@ -113,11 +112,11 @@ export default function ProductCard({
         </div>
 
         {/* Price */}
-        <div className="flex items-center font-IranSansNum justify-between mt-1">
-          <span className="text-xs line-through text-zinc-400">
+        <div className="flex items-center font-IranSansNum justify-between mt-1 min-h-[1.6rem] whitespace-nowrap gap-2 overflow-hidden">
+          <span className="text-xs line-through text-zinc-400 truncate max-w-[50%]">
             {price.toLocaleString()} تومان
           </span>
-          <span className="text-red-600 font-bold text-sm">
+          <span className="text-red-600 font-bold text-sm truncate max-w-[50%] text-left">
             {discountedPrice.toLocaleString()} تومان
           </span>
         </div>

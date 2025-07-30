@@ -29,7 +29,6 @@ function MainNav() {
   // Close the user box when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // بررسی می‌کنیم که آیا کلیک خارج از منو و دکمه آیکون بوده است
       if (
         userBoxRef.current &&
         !userBoxRef.current.contains(event.target as Node) &&

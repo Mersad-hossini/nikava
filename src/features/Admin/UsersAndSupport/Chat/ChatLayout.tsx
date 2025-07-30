@@ -12,7 +12,6 @@ export default function ChatLayout({
 
   return (
     <div className="relative h-[80vh] rounded-xl overflow-hidden shadow pb-9 md:pb-0">
-      {/* دکمه باز کردن سایدبار در موبایل */}
       <div className="md:hidden p-2 bg-white border-b border-zinc-200 flex justify-between items-center">
         <button
           onClick={() => setIsSidebarOpen(true)}

@@ -13,7 +13,7 @@ export default function ProfileForm({
         🧾{title}
       </h1>
 
-      {/* تصویر پروفایل */}
+      {/* Profile Image */}
       <div className="flex justify-center">
         <label className="cursor-pointer relative w-24 h-24">
           <Image
@@ -26,7 +26,6 @@ export default function ProfileForm({
         </label>
       </div>
 
-      {/* فرم اطلاعات */}
       <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormInput
           as="input"

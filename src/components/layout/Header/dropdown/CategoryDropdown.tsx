@@ -238,7 +238,7 @@ const CategoryDropdown = () => {
       {/* منوها */}
       {isOpen && (
         <div className="absolute right-0 top-full category-dropdown flex bg-white border border-gray-200 shadow-2xl rounded-lg z-50 text-right max-h-[80vh] w-full sm:w-auto">
-          {/* منوی اول */}
+          {/* First Menu */}
           <ul className="w-60 max-h-[480px] overflow-y-auto text-sm rounded-lg text-gray-800 divide-y divide-gray-100">
             {categories.map((cat) => (
               <li
@@ -254,7 +254,7 @@ const CategoryDropdown = () => {
             ))}
           </ul>
 
-          {/* منوی دوم */}
+          {/* Seconde Menu */}
           <div className="w-64 max-h-[80vh] overflow-y-auto border-r rounded-lg border-gray-100 bg-gray-50">
             <ul className="text-xs max-h-[480px] text-gray-700 rounded-lg py-3 px-4 space-y-1">
               {categories
