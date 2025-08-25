@@ -24,7 +24,7 @@ function Header() {
   }, [lastScrollY]);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md transition-all duration-300">
+    <header className="sticky top-0 z-50 pt-1 sm:pt-0 bg-white shadow-md transition-all duration-300">
       <TopBar />
 
       <nav className="mt-3 mx-6 pb-3 lg:pb-0">
