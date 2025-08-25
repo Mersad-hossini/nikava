@@ -62,14 +62,14 @@ export default function Notifications() {
   return (
     <div className="bg-white rounded-xl border border-zinc-100 shadow-md p-4">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl font-bold text-gray-800 flex items-center gap-2">
+        <h2 className="text:md sm:text-xl font-bold text-gray-800 flex items-center gap-2">
           <Bell className="size-5" /> مدیریت نوتیفیکیشن‌ها
         </h2>
         <Link
           href="#"
           className="btn btn-sm text-white border-none bg-gray-400 hover:bg-gray-500"
         >
-          علامت‌گذاری همه به عنوان خوانده‌شده
+          همه خوانده شد ✔
         </Link>
       </div>
 

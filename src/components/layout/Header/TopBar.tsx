@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function TopBar() {
   return (
-    <div className="select-none">
+    <div className="hidden sm:block select-none">
       <Link href="/nikava-offers">
         <Image
           src="/images/topbar.gif"

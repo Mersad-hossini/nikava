@@ -1,5 +1,4 @@
-import { Plus, Settings, LogOut } from "lucide-react";
-import NotificationBell from "@/components/ui/NotificationBell/NotificationBell";
+import { Plus, Settings, LogOut, Bell } from "lucide-react";
 import Link from "next/link";
 
 const AdminBottomNav = () => {
@@ -65,7 +64,7 @@ const AdminBottomNav = () => {
         </div>
 
         {/* نوتیفیکیشن */}
-        <NotificationBell />
+        <Bell />
 
         {/* خروج */}
         <button title="خروج">
